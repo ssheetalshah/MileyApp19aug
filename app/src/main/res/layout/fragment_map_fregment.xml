@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fregment.MapFregment">
+
+  <LinearLayout
+      android:orientation="vertical"
+      android:weightSum="1"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <LinearLayout
+          android:layout_weight="0.90"
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+          <TextView
+              android:textColor="#000"
+              android:textSize="20dp"
+              android:gravity="center"
+              android:text="Event Member Comments"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" />
+
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:orientation="horizontal"
+          android:background="#000"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"></LinearLayout>
+
+
+      <LinearLayout
+          android:padding="5dp"
+          android:layout_marginTop="5dp"
+          android:layout_weight="0.10"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+          <LinearLayout
+              android:id="@+id/btnn"
+              android:weightSum="1"
+              android:background="@drawable/bt_background"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+              <LinearLayout
+                  android:layout_weight="0.70"
+                  android:orientation="vertical"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                 <ImageView
+                     android:src="@drawable/profile"
+                     android:layout_width="match_parent"
+                     android:layout_height="70dp" />
+
+                  <TextView
+                      android:text="Mr Kumar"
+                      android:textColor="#000"
+                      android:gravity="center"
+                      android:textSize="11dp"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content" />
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_weight="0.30"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <TextView
+                      android:text="If you've ever attended a corporate event, then you know the welcome speech gets all of the attention. The welcome speech is what allures."
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content" />
+
+              </LinearLayout>
+
+          </LinearLayout>
+
+      </LinearLayout>
+
+  </LinearLayout>
+
+</FrameLayout>
