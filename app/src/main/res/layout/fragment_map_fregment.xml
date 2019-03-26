@@ -42,10 +42,16 @@
           android:layout_width="match_parent"
           android:layout_height="match_parent">
 
+          <android.support.v7.widget.CardView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="5dp"
+              >
+
           <LinearLayout
               android:id="@+id/btnn"
               android:weightSum="1"
-              android:background="@drawable/bt_background"
+
               android:orientation="horizontal"
               android:layout_width="match_parent"
               android:layout_height="wrap_content">
@@ -84,6 +90,7 @@
               </LinearLayout>
 
           </LinearLayout>
+          </android.support.v7.widget.CardView>
 
       </LinearLayout>
 

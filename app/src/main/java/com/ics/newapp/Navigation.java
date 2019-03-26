@@ -15,6 +15,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.ics.newapp.fregment.Favorite_list;
 import com.ics.newapp.fregment.ListFragment;
 import com.ics.newapp.fregment.MapFregment;
 
@@ -27,6 +28,11 @@ public class Navigation extends AppCompatActivity
         setContentView(R.layout.activity_navigation);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
+        tx.replace(R.id.content_frame, new MapFregment());
+        tx.commit();
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -61,6 +67,7 @@ public class Navigation extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.navigation, menu);
+
         return true;
     }
 
@@ -75,6 +82,13 @@ public class Navigation extends AppCompatActivity
         if (id == R.id.action_settings) {
             return true;
         }
+        if (id == R.id.navigation_add_fav) {
+            return true;
+        } if (id == R.id.navigation_add_event) {
+            return true;
+        } if (id == R.id.navigation_profile) {
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -86,19 +100,21 @@ public class Navigation extends AppCompatActivity
 
         //initializing the fragment object which is selected
         switch (itemId) {
-            case R.id.nav_camera:
+            case R.id.nav_homePage:
                 fragment = new ListFragment();
                 break;
-            case R.id.nav_gallery:
-                fragment = new MapFregment();
+            case R.id.nav_profile:
+               // fragment = new MapFregment();
                 break;
-            case R.id.nav_slideshow:
-                fragment = new MapFregment();
+            case R.id.nav_fav:
+                fragment = new Favorite_list();
                 break;
+
         }
 
         //replacing the fragment
         if (fragment != null) {
+
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_frame, fragment);
             ft.commit();

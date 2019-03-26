@@ -1,28 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:visible="false"
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
-
 
     <item
-        android:visible="false"
+
         android:id="@+id/navigation_add_fav"
         android:icon="@drawable/favorite_icon"
         android:title="Add Fav"/>
 
     <item
-        android:visible="false"
+
         android:id="@+id/navigation_add_event"
         android:icon="@drawable/add_people"
         android:title="Add Event"/>
 
     <item
-        android:visible="false"
+
         android:id="@+id/navigation_profile"
         android:icon="@drawable/profile_icon"
         android:title="Profile"/>

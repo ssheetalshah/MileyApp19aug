@@ -10,9 +10,9 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:alpha=".40"
+        android:alpha=".20"
         android:scaleType="fitXY"
-        android:src="@drawable/bgd" />
+        android:src="@drawable/bg_image" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
             android:gravity="center"
-            android:text="NewApp"
+            android:text="@string/title_activity_navigation"
             android:textColor="#000"
             android:textSize="25dp"
             android:textStyle="bold"
@@ -76,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="40dp"
                 android:gravity="center"
-                android:text="Forget Password?"
+                android:text="Forgot Password?"
                 android:textSize="13dp" />
 
             <Button
