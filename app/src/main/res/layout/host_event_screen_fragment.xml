@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fregment.ListFragment">
+
+    <LinearLayout
+        android:weightSum="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_weight="0.9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    >
+
+                    <LinearLayout
+                        android:weightSum="1"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <ImageView
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/pppp"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:src="@drawable/girl"
+                            android:layout_gravity="center"
+
+                            />
+
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <LinearLayout
+                    android:weightSum="1"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_weight="0.7"
+                        android:text="Event Name:-"
+                        android:gravity="left"
+                        android:textSize="15dp"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_weight="0.3"
+                        android:text="New Year Night Party"
+                        android:gravity="left"
+                        android:textSize="15dp"
+                        android:textColor="#000"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:weightSum="1"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_weight="0.6"
+                        android:text="Event Location:-"
+                        android:gravity="left"
+                        android:textSize="15dp"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_weight="0.4"
+                        android:text="Indore"
+                        android:gravity="left"
+                        android:textSize="15dp"
+                        android:textColor="#000"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:weightSum="1"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_weight="0.6"
+                        android:text="Event Date &amp; Tme:-"
+                        android:gravity="left"
+                        android:textSize="15dp"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_weight="0.4"
+                        android:text="22-04-2019, 2.30 PM"
+                        android:gravity="left"
+                        android:textSize="15dp"
+                        android:textColor="#000"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:weightSum="1"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_weight="0.7"
+                        android:text="Event Type:-"
+                        android:gravity="left"
+                        android:textSize="15dp"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_weight="0.3"
+                        android:text="Public Event"
+                        android:gravity="left"
+                        android:textSize="15dp"
+                        android:textColor="#000"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="About Event:-"
+                        android:gravity="left"
+                        android:textSize="15dp"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="The prime minister is the senior-most member of cabinet in the executive of government in a parliamentary system. The prime minister selects and can dismiss members of the cabinet; allocates posts to members within the government; and is the presiding member and chairperson of the cabinet."
+                        android:gravity="left"
+                        android:textSize="15dp"
+                        android:textColor="#000"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorNavHedder">
+                </View>
+
+            <LinearLayout
+                android:gravity="center"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_weight="0.5"
+                    android:text="List of Members"
+                    android:gravity="left"
+                    android:textSize="15dp"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:text="50"
+                    android:gravity="right"
+                    android:textSize="15dp"
+                    android:textColor="#3F51B5"
+                    android:textStyle="bold"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorNavHedder">
+                </View>
+
+
+                <LinearLayout
+                    android:layout_weight="0.10"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!--<android.support.v7.widget.RecyclerView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content">-->
+
+                    <!--</android.support.v7.widget.RecyclerView>-->
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        >
+
+                        <LinearLayout
+                            android:weightSum="1"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_weight="0.70"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:id="@+id/profile_image"
+                                    android:layout_width="75dp"
+                                    android:layout_height="75dp"
+                                    android:src="@drawable/girl"
+                                    app:civ_border_width="1dp"
+                                    android:layout_marginBottom="5dp"
+                                    app:civ_border_color="#000"/>
+
+                                <TextView
+                                    android:text="Ms Alina"
+                                    android:gravity="center"
+                                    android:textSize="11dp"
+                                    android:textColor="#000"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="0.30"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="#000"
+                                    android:layout_marginBottom="3dp"
+                                    android:text="New Year Celebration"
+                                    android:textSize="14dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                                <TextView
+                                    android:textColor="#000"
+                                    android:textSize="11dp"
+                                    android:layout_marginBottom="3dp"
+                                    android:text="Pari chowk market"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                                <TextView
+                                    android:textColor="#000"
+                                    android:text="Mar 2019 23"
+                                    android:textSize="11dp"
+                                    android:layout_marginBottom="3dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                                <LinearLayout
+                                    android:weightSum="1"
+                                    android:orientation="horizontal"
+                                    android:layout_margin="5dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <Button
+                                        android:text="Accept"
+                                        android:textAllCaps="false"
+                                        android:layout_weight="0.33"
+                                        android:textColor="#fff"
+                                        android:layout_marginRight="5dp"
+                                        android:background="@drawable/bgcolor"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="35dp" />
+
+                                    <Button
+                                        android:text="Reject"
+                                        android:textAllCaps="false"
+                                        android:layout_weight="0.33"
+                                        android:textColor="#fff"
+                                        android:layout_marginRight="5dp"
+                                        android:background="@drawable/bgcolor"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="35dp" />
+
+                                    <Button
+                                        android:text="Hold"
+                                        android:textAllCaps="false"
+                                        android:layout_weight="0.33"
+                                        android:textColor="#fff"
+                                        android:layout_marginRight="5dp"
+                                        android:background="@drawable/bgcolor"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="35dp" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <android.support.v7.widget.CardView
+            android:layout_weight="0.1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:background="@color/colorNavHedder"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:background="@color/colorNavHedder"
+
+                >
+                <LinearLayout
+                    android:layout_weight="0.33"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="40"
+                        android:textSize="15dp"
+                        android:textColor="#fff"
+                        android:textAlignment="center"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Accept"
+                        android:textSize="15dp"
+                        android:textColor="#fff"
+                        android:textAlignment="center"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="0.33"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:textSize="15dp"
+                        android:textColor="#fff"
+                        android:textAlignment="center"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Reject"
+                        android:textSize="15dp"
+                        android:textColor="#fff"
+                        android:textAlignment="center"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="0.33"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2"
+                        android:textSize="15dp"
+                        android:textColor="#fff"
+                        android:textAlignment="center"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hold"
+                        android:textSize="15dp"
+                        android:textColor="#fff"
+                        android:textAlignment="center"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

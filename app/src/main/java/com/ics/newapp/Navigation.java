@@ -15,9 +15,16 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.ics.newapp.fregment.Create_Activity;
+import com.ics.newapp.fregment.Event_Host_User_Profile;
 import com.ics.newapp.fregment.Favorite_list;
+import com.ics.newapp.fregment.Guest_Event_Screen;
+import com.ics.newapp.fregment.Host_Event_Screen;
 import com.ics.newapp.fregment.ListFragment;
 import com.ics.newapp.fregment.MapFregment;
+import com.ics.newapp.fregment.MyActivity_fragment;
+import com.ics.newapp.fregment.ReviewAndRating;
+import com.ics.newapp.fregment.profile_fragment;
 
 public class Navigation extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -104,12 +111,32 @@ public class Navigation extends AppCompatActivity
                 fragment = new ListFragment();
                 break;
             case R.id.nav_profile:
-               // fragment = new MapFregment();
+                fragment = new profile_fragment();
                 break;
             case R.id.nav_fav:
                 fragment = new Favorite_list();
                 break;
+            case R.id.nav_my_acti:
+                fragment = new MyActivity_fragment();
+                break;
 
+            case R.id.nav_bookmark:
+                fragment = new ReviewAndRating();
+                break;
+
+            case R.id.nav_contact:
+                fragment = new Create_Activity();
+                break;
+
+            case R.id.nav_share:
+                fragment = new Event_Host_User_Profile();
+                break;
+            case R.id.nav_logout:
+                fragment = new Guest_Event_Screen();
+                break;
+//            case R.id.nav_logout:
+//                fragment = new Host_Event_Screen();
+//                break;
         }
 
         //replacing the fragment
