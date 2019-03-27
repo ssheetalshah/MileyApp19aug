@@ -43,7 +43,6 @@
 
                 <LinearLayout
                     android:weightSum="1"
-                    android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -64,7 +63,7 @@
                         <TextView
                             android:text="Ms Alina"
                             android:gravity="center"
-                            android:textSize="11dp"
+                            android:textSize="20dp"
                             android:textColor="#000"
                             android:textStyle="bold"
                             android:layout_marginTop="10dp"
@@ -83,14 +82,26 @@
             <EditText
                 android:background="@drawable/comment_bg"
                 android:layout_width="match_parent"
-                android:layout_height="160dp"
+                android:layout_height="120dp"
                 android:id="@+id/text_dialog"
                 android:textSize="13dp"
                 android:hint="Write your Comment Here"
                 android:textColor="#ff000000"
                 android:textColorHint="#000"
-                android:layout_marginBottom="25dp"
+                android:layout_marginBottom="10dp"
                 android:gravity="start"/>
+
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_width="wrap_content"
+                    android:numStars="5"
+                    android:rating="1.0"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:progressTint="@color/colorRating"
+                    android:layout_height="wrap_content" />
+
 
             <Button
                 android:layout_width="match_parent"
@@ -105,6 +116,7 @@
                 android:layout_below="@+id/text_dialog"
                 android:layout_centerHorizontal="true"
                 android:textColor="#ffffffff" />
+
 
             </LinearLayout>
 

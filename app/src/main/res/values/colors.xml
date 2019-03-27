@@ -7,5 +7,7 @@
     <color name="colorNavHedder">#5D669C</color>
     <color name="colorTextHedder">#0E23AD</color>
 
+    <color name="colorRating">#FF8F07</color>
+
 
 </resources>
