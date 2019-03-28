@@ -8,14 +8,14 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class RegistrationActivity extends AppCompatActivity {
-    TextView sign;
+    Button sign;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
 
-        sign = (TextView) findViewById(R.id.sign);
+        sign = findViewById(R.id.sign);
 
         sign.setOnClickListener(new View.OnClickListener() {
             @Override
