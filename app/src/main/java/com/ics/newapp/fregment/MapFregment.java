@@ -6,6 +6,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +22,8 @@ import com.ics.newapp.R;
 
 
 public class MapFregment extends Fragment {
-    LinearLayout btnn;
+    LinearLayout fav_list,add_event,view_profile;
+    Button btn_M_view,btn_L_view;
 
     @Nullable
     @Override
@@ -34,6 +38,48 @@ public class MapFregment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //you can set the title for your toolbar here for different fragments different titles
+
+        fav_list=(LinearLayout)view.findViewById(R.id.fav_list);
+        add_event=(LinearLayout)view.findViewById(R.id.add_event);
+        view_profile=(LinearLayout)view.findViewById(R.id.provile_view);
+        btn_L_view=view.findViewById(R.id.l_view);
+        btn_M_view=view.findViewById(R.id.m_view);
+
+        fav_list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment Favorite_List=new Favorite_list();
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.content_frame,Favorite_List);
+                fragmentTransaction.commit();
+
+            }
+        });
+
+        view_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment profile_List=new profile_fragment();
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.content_frame,profile_List);
+                fragmentTransaction.commit();
+
+            }
+        });
+
+        btn_L_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment listview=new ListFragment();
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.content_frame,listview);
+                fragmentTransaction.commit();
+
+            }
+        });
 
 
     }

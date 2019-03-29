@@ -355,14 +355,8 @@
 
         >
 
-        <!--<android.support.v7.widget.CardView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_weight="0.33"-->
-            <!--android:layout_margin="5dp"-->
-            <!--android:padding="5dp"-->
-            <!--&gt;-->
             <LinearLayout
+                android:id="@+id/fav_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -385,16 +379,8 @@
                     />
             </LinearLayout>
 
-        <!--</android.support.v7.widget.CardView>-->
-
-        <!--<android.support.v7.widget.CardView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_weight="0.33"-->
-            <!--android:layout_margin="5dp"-->
-            <!--android:padding="5dp"-->
-            <!--&gt;-->
             <LinearLayout
+                android:id="@+id/add_event"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -417,15 +403,8 @@
                     />
             </LinearLayout>
 
-        <!--</android.support.v7.widget.CardView>-->
-        <!--<android.support.v7.widget.CardView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_weight="0.33"-->
-            <!--android:layout_margin="5dp"-->
-            <!--android:padding="5dp"-->
-            <!--&gt;-->
             <LinearLayout
+                android:id="@+id/provile_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -471,6 +450,7 @@
                >
 
                 <Button
+                    android:id="@+id/m_view"
                     android:text="M View"
                     android:textSize="18dp"
                     android:textColor="#C3F143"
@@ -481,6 +461,7 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
@@ -491,6 +472,7 @@
                >
 
                 <Button
+                    android:id="@+id/l_view"
                     android:text="L View"
                     android:textSize="18dp"
                     android:textColor="#fff"
