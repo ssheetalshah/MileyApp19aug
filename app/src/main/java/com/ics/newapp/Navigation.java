@@ -73,7 +73,7 @@ public class Navigation extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.navigation, menu);
+        getMenuInflater().inflate(R.menu.navigation1, menu);
 
         return true;
     }
@@ -84,12 +84,10 @@ public class Navigation extends AppCompatActivity
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
+        Fragment fragment = null;
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
         if (id == R.id.navigation_add_fav) {
+            fragment = new Favorite_list();
             return true;
         } if (id == R.id.navigation_add_event) {
             return true;
