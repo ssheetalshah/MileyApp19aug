@@ -18,12 +18,19 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.ics.newapp.R;
 
 
-public class MapFregment extends Fragment {
+public class MapFregment extends Fragment implements OnMapReadyCallback {
     LinearLayout fav_list,add_event,view_profile;
     Button btn_M_view,btn_L_view;
+    private GoogleMap mMap;
 
     @Nullable
     @Override
@@ -37,8 +44,12 @@ public class MapFregment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        //you can set the title for your toolbar here for different fragments different titles
+        //you can set the title for your
+        // toolbar here for different fragments different titles
         getActivity().setTitle("Miley");
+        SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
 
         fav_list=(LinearLayout)view.findViewById(R.id.fav_list);
         add_event=(LinearLayout)view.findViewById(R.id.add_event);
@@ -83,5 +94,15 @@ public class MapFregment extends Fragment {
         });
 
 
+    }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+
+        // Add a marker in Sydney and move the camera
+        LatLng sydney = new LatLng(-34, 151);
+        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }
 }
