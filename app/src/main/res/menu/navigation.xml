@@ -13,6 +13,13 @@
         android:icon="@drawable/ic_share"
         android:title="share" />
 
+    <item
+        android:visible="false"
+        app:showAsAction="ifRoom"
+        android:id="@+id/action_create"
+        android:icon="@drawable/ic_add_circle_outline_black_24dp"
+        android:title="create Activity" />
+
 
 
 

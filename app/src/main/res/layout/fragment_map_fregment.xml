@@ -11,22 +11,7 @@
       android:layout_width="match_parent"
       android:layout_height="match_parent">
 
-      <LinearLayout
-          android:layout_weight="0.90"
-          android:orientation="vertical"
-          android:layout_width="match_parent"
-          android:layout_height="match_parent">
 
-          <TextView
-              android:textColor="#000"
-              android:textSize="20dp"
-              android:gravity="center"
-              android:text="Event Member Comments"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent" />
-
-
-      </LinearLayout>
 
       <LinearLayout
           android:orientation="horizontal"
