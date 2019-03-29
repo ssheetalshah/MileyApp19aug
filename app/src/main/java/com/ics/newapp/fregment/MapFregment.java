@@ -23,7 +23,7 @@ import com.ics.newapp.R;
 
 public class MapFregment extends Fragment {
     LinearLayout fav_list,add_event,view_profile;
-    CardView btn_M_view,btn_L_view;
+    Button btn_M_view,btn_L_view;
 
     @Nullable
     @Override
@@ -42,8 +42,8 @@ public class MapFregment extends Fragment {
         fav_list=(LinearLayout)view.findViewById(R.id.fav_list);
         add_event=(LinearLayout)view.findViewById(R.id.add_event);
         view_profile=(LinearLayout)view.findViewById(R.id.provile_view);
-        btn_L_view=(CardView)view.findViewById(R.id.m_view);
-        btn_M_view=(CardView)view.findViewById(R.id.l_view);
+        btn_L_view=view.findViewById(R.id.l_view);
+        btn_M_view=view.findViewById(R.id.m_view);
 
         fav_list.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,13 +69,13 @@ public class MapFregment extends Fragment {
             }
         });
 
-        btn_M_view.setOnClickListener(new View.OnClickListener() {
+        btn_L_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment mapview=new MapFregment();
+                Fragment listview=new ListFragment();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.content_frame,mapview);
+                fragmentTransaction.replace(R.id.content_frame,listview);
                 fragmentTransaction.commit();
 
             }

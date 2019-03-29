@@ -13,6 +13,7 @@ import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.ics.newapp.R;
@@ -20,7 +21,7 @@ import com.ics.newapp.R;
 
 public class ListFragment extends Fragment {
     LinearLayout fav_list,add_event,view_profile;
-    CardView btn_M_view,btn_L_view;
+    Button btn_M_view,btn_L_view;
 
 
     @Nullable
@@ -40,8 +41,8 @@ public class ListFragment extends Fragment {
         fav_list=(LinearLayout)view.findViewById(R.id.fav_list);
         add_event=(LinearLayout)view.findViewById(R.id.add_event);
         view_profile=(LinearLayout)view.findViewById(R.id.provile_view);
-        btn_L_view=(CardView)view.findViewById(R.id.m_view);
-        btn_M_view=(CardView)view.findViewById(R.id.l_view);
+        btn_L_view=view.findViewById(R.id.l_view);
+        btn_M_view=view.findViewById(R.id.m_view);
 
         fav_list.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -146,7 +146,6 @@
                 android:weightSum="1"
                 >
                 <android.support.v7.widget.CardView
-                    android:id="@+id/m_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
@@ -157,6 +156,7 @@
                     >
 
                     <Button
+                        android:id="@+id/m_view"
                         android:text="M View"
                         android:textSize="15dp"
                         android:textColor="#C3F143"
@@ -167,7 +167,6 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/l_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
@@ -178,6 +177,7 @@
                     >
 
                     <Button
+                        android:id="@+id/l_view"
                         android:text="L View"
                         android:textSize="15dp"
                         android:textColor="#fff"
