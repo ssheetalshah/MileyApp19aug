@@ -120,13 +120,13 @@
                         android:layout_height="wrap_content" />
                 </LinearLayout>
 
-                <View
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:background="@color/colorNavHedder">
-                </View>
 
+            <LinearLayout
+                android:background="#A0AAE2"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
                 <TextView
                     android:text="Rating &amp; Reviews"
                     android:gravity="left"
@@ -136,13 +136,8 @@
                     android:layout_margin="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
-                <View
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:background="@color/colorNavHedder">
-                </View>
 
+</LinearLayout>
 
                 <LinearLayout
                     android:layout_weight="0.10"
