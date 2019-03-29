@@ -84,14 +84,13 @@ public class Navigation extends AppCompatActivity
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        Fragment fragment = null;
         //noinspection SimplifiableIfStatement
-        if (id == R.id.navigation_add_fav) {
-            fragment = new Favorite_list();
+        if (id == R.id.action_search) {
+
             return true;
-        } if (id == R.id.navigation_add_event) {
-            return true;
-        } if (id == R.id.navigation_profile) {
+        }
+        if (id == R.id.action_share) {
+
             return true;
         }
 
@@ -106,7 +105,7 @@ public class Navigation extends AppCompatActivity
         //initializing the fragment object which is selected
         switch (itemId) {
             case R.id.nav_homePage:
-                fragment = new ListFragment();
+                fragment = new MapFregment();
                 break;
             case R.id.nav_profile:
                 fragment = new profile_fragment();

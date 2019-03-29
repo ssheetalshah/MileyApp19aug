@@ -38,6 +38,8 @@ public class ListFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         //you can set the title for your toolbar here for different fragments different titles
 
+        getActivity().setTitle("Miley");
+
         fav_list=(LinearLayout)view.findViewById(R.id.fav_list);
         add_event=(LinearLayout)view.findViewById(R.id.add_event);
         view_profile=(LinearLayout)view.findViewById(R.id.provile_view);

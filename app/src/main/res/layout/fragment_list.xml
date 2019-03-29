@@ -452,7 +452,7 @@
                 <Button
                     android:id="@+id/m_view"
                     android:text="M View"
-                    android:textSize="18dp"
+                    android:textSize="15dp"
                     android:textColor="#C3F143"
                     android:textAllCaps="false"
                     android:background="@drawable/card_radius"
@@ -474,7 +474,7 @@
                 <Button
                     android:id="@+id/l_view"
                     android:text="L View"
-                    android:textSize="18dp"
+                    android:textSize="15dp"
                     android:textColor="#fff"
                     android:textAllCaps="false"
                     android:background="@drawable/card_right_radius"
