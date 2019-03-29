@@ -63,7 +63,7 @@
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="28dp"
                         android:layout_gravity="center"
                         android:layout_weight="0.85"
                         android:src="@drawable/name" />
@@ -93,7 +93,7 @@
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="28dp"
                         android:layout_gravity="center"
                         android:layout_weight="0.85"
                         android:src="@drawable/mobile" />
@@ -123,7 +123,7 @@
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="28dp"
                         android:layout_gravity="center"
                         android:layout_weight="0.85"
                         android:src="@drawable/pass" />
@@ -153,7 +153,7 @@
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="28dp"
                         android:layout_gravity="center"
                         android:layout_weight="0.85"
                         android:src="@drawable/pass" />

@@ -30,6 +30,7 @@ public class ListFragment extends Fragment {
         //returning our layout file
         //change R.layout.yourlayoutfilename for each of your fragments
         return inflater.inflate(R.layout.fragment_list, container, false);
+
     }
 
 
