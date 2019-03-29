@@ -38,6 +38,7 @@ public class MapFregment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //you can set the title for your toolbar here for different fragments different titles
+        getActivity().setTitle("Miley");
 
         fav_list=(LinearLayout)view.findViewById(R.id.fav_list);
         add_event=(LinearLayout)view.findViewById(R.id.add_event);

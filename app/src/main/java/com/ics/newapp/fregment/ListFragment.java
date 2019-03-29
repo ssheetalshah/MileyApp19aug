@@ -21,7 +21,7 @@ import com.ics.newapp.R;
 
 public class ListFragment extends Fragment {
     LinearLayout fav_list,add_event,view_profile;
-    Button btn_M_view,btn_L_view;
+    Button btn_M_view,btn_L_view,view_event;
 
 
     @Nullable
@@ -45,6 +45,7 @@ public class ListFragment extends Fragment {
         view_profile=(LinearLayout)view.findViewById(R.id.provile_view);
         btn_L_view=view.findViewById(R.id.l_view);
         btn_M_view=view.findViewById(R.id.m_view);
+       view_event=view.findViewById(R.id.view_event);
 
         fav_list.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,7 +83,17 @@ public class ListFragment extends Fragment {
             }
         });
 
+view_event.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Fragment view_event=new Guest_Event_Screen();
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.content_frame,view_event);
+        fragmentTransaction.commit();
 
+    }
+});
 
     }
 

@@ -12,20 +12,6 @@
         android:layout_height="match_parent">
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="My Activity"
-            android:textColor="@color/colorNavHedder"
-            android:textSize="25dp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/colorNavHedder">
-        </View>
 
         <LinearLayout
             android:layout_weight="0.10"
