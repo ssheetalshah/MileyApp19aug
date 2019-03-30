@@ -26,7 +26,7 @@ public class Create_Activity  extends Fragment {
     public void onPrepareOptionsMenu(Menu menu) {
         MenuItem item = menu.findItem(R.id.action_search);
         MenuItem item1 = menu.findItem(R.id.action_share);
-        MenuItem item2 = menu.findItem(R.id.action_create);
+   //     MenuItem item2 = menu.findItem(R.id.action_create);
         item.setVisible(false);
         item1.setVisible(false);
 

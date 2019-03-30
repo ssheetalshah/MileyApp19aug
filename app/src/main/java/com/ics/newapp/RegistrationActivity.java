@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class RegistrationActivity extends AppCompatActivity {
-    Button sign;
+    TextView sign;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

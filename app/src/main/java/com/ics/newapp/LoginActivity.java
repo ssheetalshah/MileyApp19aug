@@ -5,10 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity {
-    Button btn_login;
-    Button signup;
+    TextView btn_login;
+    TextView signup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,8 +18,8 @@ public class LoginActivity extends AppCompatActivity {
 
        // getSupportActionBar().setTitle("Login");
 
-        btn_login = (Button)findViewById(R.id.btn_login);
-        signup = (Button)findViewById(R.id.btn_signup);
+        btn_login = (TextView)findViewById(R.id.btn_login);
+        signup = (TextView)findViewById(R.id.btn_signup);
 
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
