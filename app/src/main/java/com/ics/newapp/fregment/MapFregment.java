@@ -93,6 +93,18 @@ public class MapFregment extends Fragment implements OnMapReadyCallback {
             }
         });
 
+        add_event.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment add_event=new Host_Event_Screen();
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.content_frame,add_event);
+                fragmentTransaction.commit();
+
+            }
+        });
+
 
     }
 

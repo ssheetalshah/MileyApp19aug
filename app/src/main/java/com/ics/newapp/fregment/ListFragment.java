@@ -84,7 +84,7 @@ public class ListFragment extends Fragment {
             }
         });
 
-view_event.setOnClickListener(new View.OnClickListener() {
+    view_event.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
         Fragment view_event=new Guest_Event_Screen();
@@ -95,6 +95,18 @@ view_event.setOnClickListener(new View.OnClickListener() {
 
     }
 });
+
+    add_event.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Fragment add_event=new Host_Event_Screen();
+            FragmentManager fragmentManager = getFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.content_frame,add_event);
+            fragmentTransaction.commit();
+
+        }
+    });
 
     }
 

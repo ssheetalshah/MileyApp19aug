@@ -9,9 +9,9 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:alpha=".20"
+        android:alpha=".40"
         android:scaleType="fitXY"
-        android:src="@drawable/bg_image" />
+        android:src="@drawable/screen" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,32 +26,37 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:gravity="center"
-                android:text="@string/title_activity_navigation"
-                android:textColor="#000"
-                android:textSize="25dp"
-                android:textStyle="bold"
-                android:typeface="monospace" />
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="20dp"-->
+                <!--android:gravity="center"-->
+                <!--android:text="@string/title_activity_navigation"-->
+                <!--android:textColor="#000"-->
+                <!--android:textSize="25dp"-->
+                <!--android:textStyle="bold"-->
+                <!--android:typeface="monospace" />-->
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:gravity="center"
-                android:text="SIGN UP"
-                android:textColor="#000"
-                android:textSize="20dp" />
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
                 android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:textAlignment="center"
+                    android:text="SIGN UP"
+                    android:textColor="#000"
+                    android:textSize="20dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -71,7 +76,7 @@
 
                     <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:layout_height="40dp"
                         android:layout_weight="0.15"
                         android:background="@drawable/bt_background"
                         android:gravity="center"
@@ -101,7 +106,7 @@
 
                     <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:layout_height="40dp"
                         android:layout_weight="0.15"
                         android:background="@drawable/bt_background"
                         android:gravity="center"
@@ -131,7 +136,7 @@
 
                     <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:layout_height="40dp"
                         android:layout_weight="0.15"
                         android:background="@drawable/bt_background"
                         android:gravity="center"
@@ -161,7 +166,7 @@
 
                     <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:layout_height="40dp"
                         android:layout_weight="0.15"
                         android:background="@drawable/bt_background"
                         android:gravity="center"
@@ -176,8 +181,9 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="40dp"
                     android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/bgcolor"
                     android:text="Sign Up"
                     android:textAllCaps="false"

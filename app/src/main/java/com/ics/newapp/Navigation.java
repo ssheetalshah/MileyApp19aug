@@ -115,6 +115,7 @@ public class Navigation extends AppCompatActivity
                 break;
             case R.id.nav_my_acti:
                 fragment = new MyActivity_fragment();
+
                 break;
 
             case R.id.nav_bookmark:
@@ -122,14 +123,14 @@ public class Navigation extends AppCompatActivity
                 break;
 
             case R.id.nav_contact:
-                fragment = new Create_Activity();
+               //te fragment = new Create_Activity();
                 break;
 
             case R.id.nav_share:
                 fragment = new Event_Host_User_Profile();
                 break;
             case R.id.nav_logout:
-                fragment = new Guest_Event_Screen();
+                //fragment = new Guest_Event_Screen();
                 break;
 //            case R.id.nav_logout:
 //                fragment = new Host_Event_Screen();
