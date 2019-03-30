@@ -35,6 +35,7 @@
                         android:layout_marginBottom="10dp"
                         android:gravity="center"
                         android:orientation="horizontal"
+                        android:background="@drawable/bt_background"
                         android:weightSum="1">
 
                         <ImageView
@@ -46,14 +47,15 @@
 
                         <EditText
                             android:layout_width="match_parent"
-                            android:layout_height="45dp"
+                            android:layout_height="wrap_content"
                             android:layout_weight="0.15"
-                            android:background="@drawable/bt_background"
                             android:gravity="left"
+                            android:layout_gravity="center"
                             android:hint="Activity Name"
                             android:inputType="text"
                             android:textColor="#000"
                             android:textColorHint="#000"
+                            android:background="#fff"
                             android:textSize="13dp" />
 
                     </LinearLayout>
@@ -115,6 +117,7 @@
                         android:layout_marginBottom="10dp"
                         android:gravity="center"
                         android:orientation="horizontal"
+                        android:background="@drawable/bt_background"
                         android:weightSum="1">
 
                         <ImageView
@@ -126,13 +129,13 @@
 
                         <EditText
                             android:layout_width="match_parent"
-                            android:layout_height="45dp"
+                            android:layout_height="wrap_content"
                             android:layout_weight="0.15"
-                            android:background="@drawable/bt_background"
                             android:gravity="left"
                             android:hint="Location"
-                            android:inputType="textPassword"
+                            android:inputType="text"
                             android:textColor="#000"
+                            android:background="#fff"
                             android:textColorHint="#000"
                             android:textSize="13dp" />
 
@@ -144,6 +147,7 @@
                         android:layout_marginBottom="10dp"
                         android:gravity="center"
                         android:orientation="horizontal"
+                        android:background="@drawable/bt_background"
                         android:weightSum="1">
 
                         <ImageView
@@ -155,10 +159,10 @@
 
                         <EditText
                             android:layout_width="match_parent"
-                            android:layout_height="45dp"
+                            android:layout_height="wrap_content"
                             android:layout_weight="0.15"
-                            android:background="@drawable/bt_background"
                             android:gravity="left"
+                            android:background="#fff"
                             android:hint="Time &amp; Date"
                             android:inputType="number"
                             android:textColor="#000"
@@ -173,12 +177,13 @@
                         android:layout_marginBottom="10dp"
                         android:gravity="center"
                         android:orientation="horizontal"
+                        android:background="@drawable/bt_background"
                         android:weightSum="1">
 
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="28dp"
-                            android:layout_gravity="center"
+                            android:layout_gravity="top"
                             android:layout_weight="0.85"
                             android:src="@drawable/actiab" />
 
@@ -187,7 +192,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="100dp"
                             android:layout_weight="0.15"
-                            android:background="@drawable/bt_background"
+                            android:background="#fff"
                             android:gravity="start"
                             android:hint="About Activity"
                             android:textColor="#ff000000"
@@ -202,6 +207,7 @@
                         android:layout_marginBottom="10dp"
                         android:gravity="center"
                         android:orientation="horizontal"
+                        android:background="@drawable/bt_background"
                         android:weightSum="1">
 
                         <ImageView
@@ -213,9 +219,9 @@
 
                         <EditText
                             android:layout_width="match_parent"
-                            android:layout_height="45dp"
+                            android:layout_height="wrap_content"
                             android:layout_weight="0.15"
-                            android:background="@drawable/bt_background"
+                            android:background="#fff"
                             android:gravity="left"
                             android:hint="Image"
                             android:editable="false"
