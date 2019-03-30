@@ -25,6 +25,10 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.ics.newapp.R;
+import com.ics.newapp.fregment.Favorite_list;
+import com.ics.newapp.fregment.Host_Event_Screen;
+import com.ics.newapp.fregment.ListFragment;
+import com.ics.newapp.fregment.profile_fragment;
 
 
 public class MapFregment extends Fragment implements OnMapReadyCallback {
