@@ -9,7 +9,6 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:alpha=".40"
         android:scaleType="fitXY"
         android:src="@drawable/screen" />
 
@@ -42,16 +41,18 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="200dp"
                 android:orientation="vertical">
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
                     android:gravity="center"
                     android:orientation="horizontal"
                     android:background="@drawable/bt_background"
@@ -82,7 +83,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
                     android:gravity="center"
                     android:orientation="horizontal"
                     android:background="@drawable/bt_background"
@@ -113,7 +116,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
                     android:gravity="center"
                     android:orientation="horizontal"
                     android:background="@drawable/bt_background"
@@ -144,7 +149,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
                     android:gravity="center"
                     android:orientation="horizontal"
                     android:background="@drawable/bt_background"
@@ -173,15 +180,25 @@
                 </LinearLayout>
 
                 <Button
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
+                    android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/bgcolor"
                     android:text="Sign Up"
                     android:textAllCaps="false"
                     android:textColor="#fff" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="Sign in"
+                    android:textColor="#040929"
+                    android:textSize="20dp" />
 
             </LinearLayout>
 
@@ -192,7 +209,6 @@
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="match_parent"-->
         <!--android:layout_weight="0.90"-->
-        <!--android:orientation="vertical">-->
 
         <!--<LinearLayout-->
         <!--android:orientation="horizontal"-->
@@ -221,7 +237,9 @@
             android:layout_marginRight="20dp"
             android:layout_weight="0.90"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
 
             <Button
                 android:id="@+id/sign"
