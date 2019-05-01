@@ -37,6 +37,18 @@
             android:id="@+id/nav_contact"
             android:icon="@drawable/contactuss"
             android:title="Contact us" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/contactuss"
+            android:title="About us" />
+        <item
+            android:id="@+id/nav_c"
+            android:icon="@drawable/contactuss"
+            android:title="Help" />
+        <item
+            android:id="@+id/nav_con"
+            android:icon="@drawable/contactuss"
+            android:title="Feedback" />
 
     </group>
 
