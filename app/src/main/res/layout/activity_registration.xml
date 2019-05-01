@@ -119,15 +119,16 @@
                         android:textSize="13dp" />
 
 
-                <Button
-                    android:visibility="gone"
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/signup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/bgcolor"
                     android:text="Sign Up"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="25dp"
+                    android:typeface="sans"
                     android:textAllCaps="false"
                     android:textColor="#fff" />
 
@@ -170,6 +171,18 @@
             android:layout_weight="0.90"
             android:gravity="center"
             android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Already have account?"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:textStyle="normal"
+                android:typeface="sans"
+                android:textAllCaps="false"
+                android:textColor="#5D669C" />
 
             <TextView
                 android:id="@+id/sign"

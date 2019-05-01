@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".Navigation"
-    tools:showIn="@layout/app_bar_navigation">
+    android:orientation="vertical"
+    tools:showIn="@layout/app_bar_navigation"
+    android:weightSum="1"
+    >
 
     <FrameLayout
+        android:layout_weight="0.95"
         android:id="@+id/content_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,4 +20,208 @@
 
     </FrameLayout>
 
-</RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_weight="0.05"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        >
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:gravity="bottom"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="5dp"
+            android:weightSum="7"
+            >
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="1"-->
+
+                <!--&gt;-->
+
+                <LinearLayout
+                    android:id="@+id/fav_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:src="@drawable/list_nav"
+                        android:layout_gravity="center"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="List/Map"
+                        android:textSize="10dp"
+                        android:textColor="#000"
+                        android:textAlignment="center"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/add_event"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:src="@drawable/globe"
+                        android:layout_gravity="center"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Map Layers"
+                        android:textSize="10dp"
+                        android:textColor="#000"
+                        android:textAlignment="center"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/proviview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:src="@drawable/here"
+                        android:layout_gravity="center"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Here"
+                        android:textSize="10dp"
+                        android:textColor="#000"
+                        android:textAlignment="center"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/piew"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <!--<ImageView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="20dp"-->
+                        <!--android:src="@drawable/profile_icon"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--/>-->
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/home_now"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/pro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:src="@drawable/plus_black"
+                        android:layout_gravity="center"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Create Event"
+                        android:textSize="10dp"
+                        android:textColor="#000"
+                        android:textAlignment="center"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/provile_vi455ew"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:src="@drawable/shares"
+                        android:layout_gravity="center"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Share"
+                        android:textSize="10dp"
+                        android:textColor="#000"
+                        android:textAlignment="center"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/provile_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:src="@drawable/menu_h"
+                        android:layout_gravity="center"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Menu"
+                        android:textSize="10dp"
+                        android:textColor="#000"
+                        android:textAlignment="center"
+                        />
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+        <!--</LinearLayout>-->
+    </android.support.v7.widget.CardView>
+
+
+
+</LinearLayout>
