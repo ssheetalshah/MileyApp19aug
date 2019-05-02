@@ -26,8 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="bottom"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
+
         >
         <LinearLayout
             android:orientation="horizontal"
@@ -35,9 +34,8 @@
             android:layout_height="match_parent"
             android:background="#fff"
             android:gravity="bottom"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:padding="10dp"
+
+
             android:weightSum="7"
             >
 
@@ -126,7 +124,6 @@
                     android:id="@+id/piew"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center"
                     android:orientation="vertical"
                     android:layout_weight="1"
                     >
@@ -138,7 +135,7 @@
                         <!--/>-->
                     <Spinner
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:entries="@array/home_now"
                         />
                 </LinearLayout>
