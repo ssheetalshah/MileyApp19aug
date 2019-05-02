@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fregment.ListFragment">
+    >
 
     <LinearLayout
         android:weightSum="1"
@@ -187,6 +187,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
             <LinearLayout
+                android:id="@+id/ll_list_event"
                 android:gravity="center"
                 android:weightSum="1"
                 android:orientation="horizontal"

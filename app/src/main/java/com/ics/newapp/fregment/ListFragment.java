@@ -1,5 +1,6 @@
 package com.ics.newapp.fregment;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -13,8 +14,12 @@ import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.ics.newapp.R;
 
@@ -22,6 +27,8 @@ import com.ics.newapp.R;
 public class ListFragment extends Fragment {
     LinearLayout fav_list,add_event,view_profile;
     Button btn_M_view,btn_L_view,view_event;
+    TextView tv_comment_send;
+    ImageView profile_image;
 
 
     @Nullable
@@ -47,6 +54,8 @@ public class ListFragment extends Fragment {
         btn_L_view=view.findViewById(R.id.l_view);
         btn_M_view=view.findViewById(R.id.m_view);
        view_event=view.findViewById(R.id.view_event);
+        profile_image=view.findViewById(R.id.profile_image);
+
 
         fav_list.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,18 +64,20 @@ public class ListFragment extends Fragment {
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.content_frame,Favorite_List);
+                fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
 
             }
         });
 
-        view_profile.setOnClickListener(new View.OnClickListener() {
+        profile_image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment profile_List=new profile_fragment();
+                Fragment profile_List=new Event_Host_User_Profile();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.content_frame,profile_List);
+                fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
 
             }
@@ -79,6 +90,7 @@ public class ListFragment extends Fragment {
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.content_frame,mapview);
+                fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
 
             }
@@ -91,6 +103,7 @@ public class ListFragment extends Fragment {
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.content_frame,view_event);
+        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 
     }
@@ -103,10 +116,12 @@ public class ListFragment extends Fragment {
             FragmentManager fragmentManager = getFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.content_frame,add_event);
+            fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
 
         }
     });
+
 
     }
 

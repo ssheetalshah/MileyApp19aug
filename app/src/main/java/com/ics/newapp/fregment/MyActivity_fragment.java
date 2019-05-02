@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -19,6 +20,7 @@ import com.ics.newapp.R;
 
 public class MyActivity_fragment extends Fragment {
     LinearLayout btnn;
+    Button edit_event;
 
     @Nullable
     @Override
@@ -44,6 +46,7 @@ public class MyActivity_fragment extends Fragment {
                         FragmentManager fragmentManager = getFragmentManager();
                         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                         fragmentTransaction.replace(R.id.content_frame,view_creat);
+                          fragmentTransaction.addToBackStack(null);
                         fragmentTransaction.commit();
 
 
@@ -60,6 +63,21 @@ public class MyActivity_fragment extends Fragment {
         //you can set the title for your toolbar here for different fragments different titles
         setHasOptionsMenu(true);
         getActivity().setTitle("My Activity");
+
+        edit_event=view.findViewById(R.id.edit_event);
+        edit_event.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment Favorite_List=new Edit_Event_Screen();
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.content_frame,Favorite_List);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+
+            }
+        });
+
 
 
     }

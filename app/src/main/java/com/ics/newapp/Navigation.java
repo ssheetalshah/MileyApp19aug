@@ -26,12 +26,13 @@ import com.ics.newapp.fregment.ListFragment;
 import com.ics.newapp.fregment.MapFregment;
 import com.ics.newapp.fregment.MyActivity_fragment;
 import com.ics.newapp.fregment.ReviewAndRating;
+import com.ics.newapp.fregment.Selection_Screen;
 import com.ics.newapp.fregment.profile_fragment;
 
 public class Navigation extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    LinearLayout ll_mlist,ll_create_act;
+    LinearLayout ll_mlist,ll_create_act,share_id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +48,7 @@ public class Navigation extends AppCompatActivity
 
         ll_mlist=findViewById(R.id.mlist);
         ll_create_act=findViewById(R.id.create_act);
+        share_id=findViewById(R.id.share_id);
 
         ll_mlist.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +63,15 @@ public class Navigation extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.content_frame, new Create_Activity());
+                ft.replace(R.id.content_frame, new Host_Event_Screen());
+                ft.commit();
+            }
+        });
+        share_id.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.content_frame, new Selection_Screen());
                 ft.commit();
             }
         });
@@ -144,7 +154,7 @@ public class Navigation extends AppCompatActivity
                 break;
 
             case R.id.nav_bookmark:
-                fragment = new ReviewAndRating();
+                fragment = new ListFragment();
                 break;
 
             case R.id.nav_contact:

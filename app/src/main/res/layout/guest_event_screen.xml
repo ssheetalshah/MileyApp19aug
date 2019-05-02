@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fregment.ListFragment">
+    >
 
     <LinearLayout
         android:weightSum="1"
@@ -358,6 +358,7 @@
             android:background="@color/colorNavHedder"
             >
             <TextView
+                android:id="@+id/tv_comment_send"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="Send Your Comments"
