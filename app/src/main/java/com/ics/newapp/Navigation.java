@@ -1,11 +1,14 @@
 package com.ics.newapp;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
+import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
@@ -22,6 +25,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.ics.newapp.fregment.Contact_us_fragment;
 import com.ics.newapp.fregment.Create_Activity;
@@ -34,7 +38,9 @@ import com.ics.newapp.fregment.MapFregment;
 import com.ics.newapp.fregment.MyActivity_fragment;
 import com.ics.newapp.fregment.ReviewAndRating;
 import com.ics.newapp.fregment.Selection_Screen;
+import com.ics.newapp.fregment.about_fragment;
 import com.ics.newapp.fregment.bookmark_fragment;
+import com.ics.newapp.fregment.feedback_fragment;
 import com.ics.newapp.fregment.help_fragment;
 import com.ics.newapp.fregment.profile_fragment;
 
@@ -49,6 +55,7 @@ public class Navigation extends AppCompatActivity
     Button btn_M_view,btn_L_view,view_event;
      String name;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +66,46 @@ public class Navigation extends AppCompatActivity
         FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
         tx.replace(R.id.content_frame, new MapFregment());
         tx.commit();
+//*********************************************************************************
+        LocationManager lm = (LocationManager)Navigation.this.getSystemService(Context.LOCATION_SERVICE);
+        boolean gps_enabled = false;
+        boolean network_enabled = false;
+
+        try {
+            gps_enabled = lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
+        } catch(Exception ex) {}
+
+        try {
+            network_enabled = lm.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
+        } catch(Exception ex) {}
+
+        if(!gps_enabled && !network_enabled) {
+            // notify user
+            final AlertDialog.Builder dialog = new AlertDialog.Builder(Navigation.this).setTitle("Miley App")
+                    .setMessage("Gps not enable");
+
+            dialog.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+
+            dialog.setPositiveButton("settings", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int whichButton) {
+                    exitLauncher();
+                }
+
+                private void exitLauncher() {
+                    Navigation.this.startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+
+                }
+            });
+            final AlertDialog alert = dialog.create();
+            alert.show();
+        }
+
 
 //************************************************************************************************
         ll_mlist=findViewById(R.id.mlist);
@@ -221,6 +268,12 @@ public class Navigation extends AppCompatActivity
 
             case R.id.nav_bookmark:
                 fragment = new bookmark_fragment();
+                break;
+                case R.id.nav_about:
+                fragment = new about_fragment();
+                break;
+                case R.id.nav_feedback:
+                fragment = new feedback_fragment();
                 break;
 
             case R.id.nav_contact:

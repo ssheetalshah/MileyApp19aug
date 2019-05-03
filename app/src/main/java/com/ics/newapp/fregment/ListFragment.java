@@ -1,10 +1,13 @@
 package com.ics.newapp.fregment;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.annotation.Nullable;
 
 import android.support.v4.app.Fragment;
@@ -20,13 +23,15 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.ics.newapp.Navigation;
 import com.ics.newapp.R;
 
 
 public class ListFragment extends Fragment {
     LinearLayout fav_list,add_event,view_profile;
-    Button btn_M_view,btn_L_view,view_event;
+    Button btn_M_view,btn_L_view,view_event,list_join;
     TextView tv_comment_send;
     ImageView profile_image;
 
@@ -55,6 +60,7 @@ public class ListFragment extends Fragment {
         btn_M_view=view.findViewById(R.id.m_view);
        view_event=view.findViewById(R.id.view_event);
         profile_image=view.findViewById(R.id.profile_image);
+        list_join=view.findViewById(R.id.list_join);
 
 
         fav_list.setOnClickListener(new View.OnClickListener() {
@@ -118,6 +124,36 @@ public class ListFragment extends Fragment {
             fragmentTransaction.replace(R.id.content_frame,add_event);
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
+
+        }
+    });
+
+        list_join.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            final AlertDialog.Builder dialog = new AlertDialog.Builder(getContext()).setTitle("Miley App")
+                    .setMessage("Are you sure, you want to join");
+
+            dialog.setNegativeButton("no", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+
+            dialog.setPositiveButton("yes", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int whichButton) {
+                    exitLauncher();
+                }
+
+                private void exitLauncher() {
+                    Toast.makeText(getContext(), "Join Success", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            final AlertDialog alert = dialog.create();
+            alert.show();
 
         }
     });

@@ -1,5 +1,7 @@
 package com.ics.newapp.fregment;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -20,7 +22,7 @@ import com.ics.newapp.R;
 
 public class MyActivity_fragment extends Fragment {
     LinearLayout btnn;
-    Button edit_event;
+    Button edit_event,act_delete;
 
     @Nullable
     @Override
@@ -65,6 +67,7 @@ public class MyActivity_fragment extends Fragment {
         getActivity().setTitle("My Activity");
 
         edit_event=view.findViewById(R.id.edit_event);
+        act_delete=view.findViewById(R.id.act_delete);
         edit_event.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,6 +77,36 @@ public class MyActivity_fragment extends Fragment {
                 fragmentTransaction.replace(R.id.content_frame,Favorite_List);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
+
+            }
+        });
+        act_delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final AlertDialog.Builder dialog = new AlertDialog.Builder(getContext()).setTitle("Miley App")
+                        .setMessage("Are you sure, you want to delete");
+
+                dialog.setNegativeButton("no", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+
+                dialog.setPositiveButton("yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        exitLauncher();
+                    }
+
+                    private void exitLauncher() {
+                        Toast.makeText(getContext(), "Delete Success", Toast.LENGTH_SHORT).show();
+
+                    }
+                });
+                final AlertDialog alert = dialog.create();
+                alert.show();
+
 
             }
         });

@@ -164,6 +164,7 @@
                            android:layout_height="35dp" />
 
                        <Button
+                           android:id="@+id/list_join"
                            android:text="Join"
                            android:textAllCaps="false"
                            android:layout_weight="0.50"

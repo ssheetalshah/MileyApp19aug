@@ -1,14 +1,21 @@
 package com.ics.newapp.fregment;
 
-import android.app.Dialog;
-import android.content.Context;
-import android.net.Uri;
+import android.Manifest;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationListener;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Looper;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.widget.CardView;
+import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,24 +24,37 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationCallback;
+import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.ics.newapp.MapsActivity;
 import com.ics.newapp.R;
-import com.ics.newapp.fregment.Favorite_list;
-import com.ics.newapp.fregment.Host_Event_Screen;
-import com.ics.newapp.fregment.ListFragment;
-import com.ics.newapp.fregment.profile_fragment;
+import com.google.android.gms.location.LocationServices;
+
+import com.google.android.gms.location.LocationRequest;
+
+import java.util.List;
 
 
-public class MapFregment extends Fragment implements OnMapReadyCallback {
+public class MapFregment extends Fragment implements OnMapReadyCallback{
+
     LinearLayout fav_list,add_event,view_profile;
     Button btn_M_view,btn_L_view;
     private GoogleMap mMap;
+
 
     @Nullable
     @Override
@@ -48,12 +68,12 @@ public class MapFregment extends Fragment implements OnMapReadyCallback {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        //you can set the title for your
-        // toolbar here for different fragments different titles
         getActivity().setTitle("Miley");
+
         SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
 
         fav_list=(LinearLayout)view.findViewById(R.id.fav_list);
         add_event=(LinearLayout)view.findViewById(R.id.add_event);

@@ -127,6 +127,7 @@
                                 android:layout_height="35dp" />
 
                             <Button
+                                android:id="@+id/act_delete"
                                 android:text="Delete"
                                 android:textAllCaps="false"
                                 android:layout_weight="0.50"
