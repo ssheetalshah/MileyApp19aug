@@ -68,7 +68,7 @@ public class MyActivity_fragment extends Fragment {
         edit_event.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment Favorite_List=new Edit_Event_Screen();
+                Fragment Favorite_List=new Create_Activity();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.content_frame,Favorite_List);

@@ -20,4 +20,13 @@
 
     </string-array>
 
+
+    <string name="email">
+        <b>Email Id: </b>miley@gmail.com
+
+    </string><string name="mobile">
+       <b>Mobile: </b> 7304027757
+
+    </string>
+
 </resources>

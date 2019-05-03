@@ -1,5 +1,10 @@
 package com.ics.newapp;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -18,6 +23,7 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.ics.newapp.fregment.Contact_us_fragment;
 import com.ics.newapp.fregment.Create_Activity;
 import com.ics.newapp.fregment.Event_Host_User_Profile;
 import com.ics.newapp.fregment.Favorite_list;
@@ -29,7 +35,10 @@ import com.ics.newapp.fregment.MyActivity_fragment;
 import com.ics.newapp.fregment.ReviewAndRating;
 import com.ics.newapp.fregment.Selection_Screen;
 import com.ics.newapp.fregment.bookmark_fragment;
+import com.ics.newapp.fregment.help_fragment;
 import com.ics.newapp.fregment.profile_fragment;
+
+import java.io.File;
 
 public class Navigation extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -38,6 +47,7 @@ public class Navigation extends AppCompatActivity
 
     LinearLayout fav_list,add_event,view_profile;
     Button btn_M_view,btn_L_view,view_event;
+     String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -214,18 +224,44 @@ public class Navigation extends AppCompatActivity
                 break;
 
             case R.id.nav_contact:
-               //te fragment = new Create_Activity();
+               fragment = new Contact_us_fragment();
+                break;
+                case R.id.nav_help:
+                fragment = new help_fragment();
                 break;
 
             case R.id.nav_share:
-               // fragment = new Event_Host_User_Profile();
+                shareApplication();
                 break;
             case R.id.nav_logout:
-                //fragment = new Guest_Event_Screen();
+                final AlertDialog.Builder dialog = new AlertDialog.Builder(Navigation.this).setTitle("Miley App")
+                        .setMessage("Are you sure, you want to logout this app");
+
+                dialog.setNegativeButton("no", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+
+                dialog.setPositiveButton("yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        exitLauncher();
+                    }
+
+                    private void exitLauncher() {
+                        Intent intent=new Intent(Navigation.this,LoginActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                });
+                final AlertDialog alert = dialog.create();
+                alert.show();
+
+
                 break;
-//            case R.id.nav_logout:
-//                fragment = new Host_Event_Screen();
-//                break;
+
         }
 
         //replacing the fragment
@@ -238,6 +274,27 @@ public class Navigation extends AppCompatActivity
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
+    }
+
+    private String shareApplication() {
+
+        ApplicationInfo app = getApplicationContext().getApplicationInfo();
+        String filePath = app.sourceDir;
+
+        int lastDot = 0;
+        String packageName = app.packageName;
+        lastDot= packageName.lastIndexOf(".");
+        name = packageName.substring(lastDot + 1);
+
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("*/*");
+        intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File(filePath)));
+        startActivity(Intent.createChooser(intent, "Share app via"));
+
+        return name;
+
+
+
     }
 
     @SuppressWarnings("StatementWithEmptyBody")

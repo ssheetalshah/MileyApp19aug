@@ -115,6 +115,7 @@
                             android:layout_height="wrap_content">
 
                             <Button
+                                android:id="@+id/fav_details"
                                 android:text="View"
                                 android:textAllCaps="false"
                                 android:layout_weight="0.50"

@@ -82,13 +82,28 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
+                        <LinearLayout
+                            android:weightSum="1"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
                         <TextView
+                            android:layout_weight="0.5"
                             android:textColor="#000"
                             android:layout_marginBottom="3dp"
                             android:text="New Year Celebration"
                             android:textSize="14dp"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="match_parent" />
+
+                        <ImageView
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_bookmark_border_black_24dp"
+                            />
+                        </LinearLayout>
 
                         <TextView
                             android:textColor="#000"
@@ -214,13 +229,29 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <TextView
-                            android:textColor="#000"
-                            android:layout_marginBottom="3dp"
-                            android:text="New Year Celebration"
-                            android:textSize="14dp"
+
+                        <LinearLayout
+                            android:weightSum="1"
+                            android:orientation="horizontal"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_weight="0.5"
+                                android:textColor="#000"
+                                android:layout_marginBottom="3dp"
+                                android:text="New Year Celebration"
+                                android:textSize="14dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                            <ImageView
+                                android:layout_weight="0.5"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_bookmark_border_black_24dp"
+                                />
+                        </LinearLayout>
 
                         <TextView
                             android:textColor="#000"
