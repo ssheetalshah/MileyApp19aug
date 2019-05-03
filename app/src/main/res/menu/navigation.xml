@@ -8,6 +8,7 @@
         android:title="@string/action_settings" />
 
     <item
+        android:visible="false"
         app:showAsAction="ifRoom"
         android:id="@+id/action_share"
         android:icon="@drawable/ic_share"

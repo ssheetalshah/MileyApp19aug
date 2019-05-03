@@ -15,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.ics.newapp.fregment.Create_Activity;
@@ -27,12 +28,16 @@ import com.ics.newapp.fregment.MapFregment;
 import com.ics.newapp.fregment.MyActivity_fragment;
 import com.ics.newapp.fregment.ReviewAndRating;
 import com.ics.newapp.fregment.Selection_Screen;
+import com.ics.newapp.fregment.bookmark_fragment;
 import com.ics.newapp.fregment.profile_fragment;
 
 public class Navigation extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     LinearLayout ll_mlist,ll_create_act,share_id;
+
+    LinearLayout fav_list,add_event,view_profile;
+    Button btn_M_view,btn_L_view,view_event;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +50,7 @@ public class Navigation extends AppCompatActivity
         tx.replace(R.id.content_frame, new MapFregment());
         tx.commit();
 
-
+//************************************************************************************************
         ll_mlist=findViewById(R.id.mlist);
         ll_create_act=findViewById(R.id.create_act);
         share_id=findViewById(R.id.share_id);
@@ -75,7 +80,58 @@ public class Navigation extends AppCompatActivity
                 ft.commit();
             }
         });
+//***************************************************************************************
+        fav_list=(LinearLayout)findViewById(R.id.fav_list);
+        add_event=(LinearLayout)findViewById(R.id.add_event1);
+        view_profile=(LinearLayout)findViewById(R.id.provile_view1);
+        btn_L_view=findViewById(R.id.l_view);
+        btn_M_view=findViewById(R.id.m_view);
 
+
+        fav_list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.content_frame, new Favorite_list());
+                ft.commit();
+            }
+        });
+
+        add_event.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.content_frame, new Create_Activity());
+                ft.commit();
+            }
+        });
+        view_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.content_frame, new profile_fragment());
+                ft.commit();
+            }
+        });
+
+        btn_L_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.content_frame, new ListFragment());
+                ft.commit();
+            }
+        });
+
+        btn_M_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.content_frame, new MapFregment());
+                ft.commit();
+            }
+        });
+        //****************************************************************************************
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -154,7 +210,7 @@ public class Navigation extends AppCompatActivity
                 break;
 
             case R.id.nav_bookmark:
-                fragment = new ListFragment();
+                fragment = new bookmark_fragment();
                 break;
 
             case R.id.nav_contact:
@@ -162,7 +218,7 @@ public class Navigation extends AppCompatActivity
                 break;
 
             case R.id.nav_share:
-                fragment = new Event_Host_User_Profile();
+               // fragment = new Event_Host_User_Profile();
                 break;
             case R.id.nav_logout:
                 //fragment = new Guest_Event_Screen();
