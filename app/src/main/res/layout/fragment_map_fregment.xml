@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fregment.MapFregment">
+    tools:context=".fregment.MemberComments">
 
   <LinearLayout
       android:orientation="vertical"
@@ -27,7 +27,6 @@
           <LinearLayout
               android:id="@+id/btnn"
               android:weightSum="1"
-
               android:orientation="horizontal"
               android:layout_width="match_parent"
               android:layout_height="wrap_content">
@@ -41,7 +40,7 @@
                  <ImageView
                      android:src="@drawable/profile"
                      android:layout_width="match_parent"
-                     android:layout_height="70dp" />
+                     android:layout_height="65dp" />
 
                   <TextView
                       android:text="Mr Kumar"
@@ -101,7 +100,7 @@
                   <ImageView
                       android:src="@drawable/profile"
                       android:layout_width="match_parent"
-                      android:layout_height="70dp" />
+                      android:layout_height="65dp" />
 
                   <TextView
                       android:text="Mr Kumar"

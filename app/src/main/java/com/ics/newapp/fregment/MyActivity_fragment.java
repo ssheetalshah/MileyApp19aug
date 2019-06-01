@@ -22,7 +22,7 @@ import com.ics.newapp.R;
 
 public class MyActivity_fragment extends Fragment {
     LinearLayout btnn;
-    Button edit_event,act_delete;
+    Button edit_event, act_delete;
 
     @Nullable
     @Override
@@ -32,30 +32,29 @@ public class MyActivity_fragment extends Fragment {
         return inflater.inflate(R.layout.my_activity_fragment, container, false);
     }
 
-    @Override
+       @Override
     public void onPrepareOptionsMenu(Menu menu) {
-        MenuItem item=menu.findItem(R.id.action_search);
-        MenuItem item1=menu.findItem(R.id.action_share);
-        MenuItem item2=menu.findItem(R.id.action_create);
-        item.setVisible(false);
+        MenuItem item = menu.findItem(R.id.action_search);
+        MenuItem item1 = menu.findItem(R.id.action_share);
+        MenuItem item2 = menu.findItem(R.id.action_create);
+        item.setVisible(true);
         item1.setVisible(false);
-        item2.setVisible(true);
+        item2.setVisible(false);
 
-        item2.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+      /*  item2.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                        Fragment view_creat=new Create_Activity();
-                        FragmentManager fragmentManager = getFragmentManager();
-                        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                        fragmentTransaction.replace(R.id.content_frame,view_creat);
-                          fragmentTransaction.addToBackStack(null);
-                        fragmentTransaction.commit();
+                Fragment view_creat = new Create_Activity();
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.content_frame, view_creat);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
 
 
                 return false;
             }
-        });
-
+        });*/
 
     }
 
@@ -66,15 +65,15 @@ public class MyActivity_fragment extends Fragment {
         setHasOptionsMenu(true);
         getActivity().setTitle("My Activity");
 
-        edit_event=view.findViewById(R.id.edit_event);
-        act_delete=view.findViewById(R.id.act_delete);
+        edit_event = view.findViewById(R.id.edit_event);
+        act_delete = view.findViewById(R.id.act_delete);
         edit_event.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment Favorite_List=new Create_Activity();
+                Fragment Favorite_List = new Host_Event_Screen();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.content_frame,Favorite_List);
+                fragmentTransaction.replace(R.id.content_frame, Favorite_List);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
 
@@ -110,7 +109,6 @@ public class MyActivity_fragment extends Fragment {
 
             }
         });
-
 
 
     }

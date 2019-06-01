@@ -5,7 +5,7 @@
         android:centerColor="#ffffff"
         android:endColor="#f9f9f9"
         android:angle="135"/>
-    <stroke android:color="#7481D5"
+    <stroke android:color="#002366"
         android:width="1dp" />
     <padding android:bottom="10dp" android:left="10dp" android:right="10dp" android:top="10dp" />
     <corners android:radius="8dp" />

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#7481D5</color>
+    <color name="colorPrimary">#002366</color>
+    <color name="colorPri">#3B6F99</color>
     <color name="colorPrimaryDark">#000</color>
     <color name="colorAccent">#000</color>
 
@@ -8,6 +9,9 @@
     <color name="colorTextHedder">#0E23AD</color>
 
     <color name="colorRating">#FF8F07</color>
+
+    <color name="blue">#7481D5</color>
+    <color name="blueee">#1a236a</color>
 
 
 </resources>

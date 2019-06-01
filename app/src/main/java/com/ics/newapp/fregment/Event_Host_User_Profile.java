@@ -8,12 +8,14 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.ics.newapp.R;
 
 public class Event_Host_User_Profile extends Fragment {
     LinearLayout review;
+    Button addReview;
 
     @Nullable
     @Override
@@ -30,8 +32,9 @@ public class Event_Host_User_Profile extends Fragment {
         //you can set the title for your toolbar here for different fragments different titles
         getActivity().setTitle("Event Host Profile");
         review=view.findViewById(R.id.review);
+        addReview=view.findViewById(R.id.addReview);
 
-        review.setOnClickListener(new View.OnClickListener() {
+        addReview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Fragment profile_List=new ReviewAndRating();
@@ -43,5 +46,7 @@ public class Event_Host_User_Profile extends Fragment {
 
             }
         });
+
+
     }
 }

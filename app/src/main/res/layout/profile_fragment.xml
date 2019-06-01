@@ -2,231 +2,227 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-        <LinearLayout
+            <LinearLayout
 
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                >
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:weightSum="1"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:orientation="vertical"
+                <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
 
-                    <ImageView
-                        xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:src="@drawable/edit_icon"
-                        android:layout_gravity="right"
-
-                        android:layout_marginRight="30dp"
-                        />
-
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/profile_image"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/girl"
-                        app:civ_border_width="1dp"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="5dp"
-                        app:civ_border_color="#000"/>
-
-                    <TextView
-                        android:text="Ms Alina"
-                        android:gravity="center"
-                        android:textSize="20dp"
-                        android:textColor="#000"
-                        android:textStyle="bold"
-                        android:layout_marginTop="10dp"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:text="25 year, Female"
-                        android:gravity="center"
-                        android:textSize="15dp"
-                        android:textColor="#000"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical"
+                        android:weightSum="1">
 
-            <LinearLayout
-                android:layout_margin="10dp"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                        <ImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="30dp"
 
-                <TextView
-                    android:drawableLeft="@drawable/email"
-                    android:drawablePadding="5dp"
-                    android:text="Email Id"
-                    android:gravity="left|center"
-                    android:textSize="15dp"
-                    android:textColor="#000"
-                    android:textStyle="bold"
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                            android:src="@drawable/edit_icon" />
 
-                <TextView
-                    android:text="msalina@gmail.com"
-                    android:gravity="left"
-                    android:textSize="15dp"
-                    android:textColor="#000"
-                    android:layout_marginTop="5dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
+                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/profile_image"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/girl"
+                            app:civ_border_color="#000"
+                            app:civ_border_width="1dp" />
 
-            <LinearLayout
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text="Ms Alina"
+                            android:textColor="#000"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
 
-                android:layout_margin="10dp"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:text="Mobile No"
-                    android:gravity="left|center"
-                    android:textSize="15dp"
-                    android:textColor="#000"
-                    android:textStyle="bold"
-                    android:drawableLeft="@drawable/mb"
-                    android:drawablePadding="5dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-                <TextView
-                    android:text="9999999999"
-                    android:gravity="left"
-                    android:textSize="15dp"
-                    android:textColor="#000"
-                    android:layout_marginTop="5dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-
-            <LinearLayout
-
-                android:layout_margin="10dp"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="25 year, Female"
+                            android:textColor="#000"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
 
                 <LinearLayout
-                    android:weightSum="1"
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                <TextView
-                    android:layout_weight="0.5"
-                    android:text="Primary Address"
-                    android:drawableLeft="@drawable/add"
-                    android:drawablePadding="5dp"
-                    android:gravity="left|center"
-                    android:textSize="15dp"
-                    android:textColor="#000"
-                    android:textStyle="bold"
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-                <TextView
-                    android:layout_weight="0.6"
-                    android:text="Manage Address"
-                    android:gravity="right"
-                    android:textColor="#546BE9"
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-                </LinearLayout>
-
-                <TextView
-                    android:text="House no. 123, housing board colony, Indore"
-                    android:gravity="left"
-                    android:textSize="15dp"
-                    android:textColor="#000"
-                    android:layout_marginTop="5dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-
-            <LinearLayout
-
-                android:layout_margin="10dp"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:weightSum="1"
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_weight="0.5"
-                    android:text="Secondary Address"
-                    android:drawableLeft="@drawable/add"
-                    android:drawablePadding="5dp"
-                    android:gravity="left|center"
-                    android:textSize="15dp"
-                    android:textColor="#000"
-                    android:textStyle="bold"
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
 
                     <TextView
-                        android:layout_weight="0.6"
-                        android:text="Manage Address"
-                        android:gravity="right"
-                        android:textColor="#546BE9"
-                        android:layout_marginTop="10dp"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:drawableLeft="@drawable/email"
+                        android:drawablePadding="5dp"
+                        android:gravity="left|center"
+                        android:text="Email Id"
+                        android:textColor="#000"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="left"
+                        android:text="msalina@gmail.com"
+                        android:textColor="#000"
+                        android:textSize="15dp" />
                 </LinearLayout>
 
-                <TextView
-                    android:text="America, India"
-                    android:gravity="left"
-                    android:textSize="15dp"
-                    android:textColor="#000"
-                    android:layout_marginTop="5dp"
+                <LinearLayout
+
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:drawableLeft="@drawable/mb"
+                        android:drawablePadding="5dp"
+                        android:gravity="left|center"
+                        android:text="Mobile No"
+                        android:textColor="#000"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="left"
+                        android:text="9999999999"
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="0.5"
+                            android:drawableLeft="@drawable/add"
+                            android:drawablePadding="5dp"
+                            android:gravity="left|center"
+                            android:text="Primary Address"
+                            android:textColor="#000"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="0.6"
+                            android:gravity="right"
+                            android:text="Manage Address"
+                            android:textColor="#546BE9" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="left"
+                        android:text="House no. 123, housing board colony, Indore"
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="0.5"
+                            android:drawableLeft="@drawable/add"
+                            android:drawablePadding="5dp"
+                            android:gravity="left|center"
+                            android:text="Secondary Address"
+                            android:textColor="#000"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="0.6"
+                            android:gravity="right"
+                            android:text="Manage Address"
+                            android:textColor="#546BE9" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="left"
+                        android:text="America, India"
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
 
             </LinearLayout>
-
-
-        </LinearLayout>
         </ScrollView>
     </LinearLayout>
 </FrameLayout>

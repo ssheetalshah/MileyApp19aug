@@ -39,15 +39,15 @@
             android:title="Contact us" />
         <item
             android:id="@+id/nav_about"
-            android:icon="@drawable/contactuss"
+            android:icon="@drawable/aboutus"
             android:title="About us" />
         <item
             android:id="@+id/nav_help"
-            android:icon="@drawable/contactuss"
+            android:icon="@drawable/faq"
             android:title="Help" />
         <item
             android:id="@+id/nav_feedback"
-            android:icon="@drawable/contactuss"
+            android:icon="@drawable/feedback"
             android:title="Feedback" />
 
     </group>

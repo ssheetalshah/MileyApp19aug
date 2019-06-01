@@ -24,10 +24,13 @@
     <string name="email">
         <b>Email Id: </b>miley@gmail.com
 
-    </string><string name="mobile">
+    </string>
+    <string name="mobile">
        <b>Mobile: </b> 7304027757
 
     </string>
     <string name="about">The Outreach Program’s mission is additionally supported by individual and corporate donations and from the purchase of handcrafted baskets made by women in the Singida region of Tanzania. These baskets are then shipped prepaid to churches and other organizations to be sold on consignment. Outreach recognizes this as one way to assist the people of the Singida region in building a future of self-reliance.</string>
+    <string name="about1">The Outreach Program’s mission is additionally supported by individual and corporate donations and from the purchase of handcrafted baskets made by women in the Singida region of Tanzania. These baskets are then shipped prepaid to churches and other organizations to be sold on consignment. Outreach recognizes this as one way to assist the people of the Singida region in building a future of self-reliance.</string>
+    <string name="about2">The Outreach Program’s mission is additionally supported by individual and corporate donations and from the purchase of handcrafted baskets made by women in the Singida region of Tanzania. These baskets are then shipped prepaid to churches and other organizations to be sold on consignment. Outreach recognizes this as one way to assist the people of the Singida region in building a future of self-reliance.</string>
 
 </resources>
