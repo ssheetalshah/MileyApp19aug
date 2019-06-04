@@ -164,26 +164,27 @@ public class Navigation extends AppCompatActivity
         fav_list.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.content_frame, new Favorite_list());
-                ft.commit();
+//                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+//                ft.replace(R.id.content_frame, new Favorite_list());
+//                ft.commit();
             }
         });
 
         add_event.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.content_frame, new Create_Activity());
-                ft.commit();
+//                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+//                ft.replace(R.id.content_frame, new Create_Activity());
+//                ft.commit();
             }
         });
         view_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.content_frame, new profile_fragment());
-                ft.commit();
+//                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+//                ft.replace(R.id.content_frame, new profile_fragment());
+//                ft.commit();
+                shareApplication();
             }
         });
 

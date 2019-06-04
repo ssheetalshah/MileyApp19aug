@@ -15,6 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:orientation="vertical">
+
             <de.hdodenhof.circleimageview.CircleImageView
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/profile_image"
@@ -22,7 +23,7 @@
                 android:layout_height="120dp"
                 android:layout_marginTop="35dp"
                 android:layout_gravity="center"
-                android:src="@drawable/girl"
+                android:src="@drawable/logo_lok"
                 app:civ_border_width="0.8dp"
                 android:layout_marginBottom="5dp"
                 app:civ_border_color="#fff"/>

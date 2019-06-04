@@ -87,8 +87,8 @@
                       android:id="@+id/profile_image"
                       android:layout_width="75dp"
                       android:layout_height="75dp"
-                      android:src="@drawable/girl"
-                      app:civ_border_width="1dp"
+                      android:src="@drawable/logo_lok"
+
                       android:layout_marginBottom="5dp"
                       app:civ_border_color="#000"/>
 
@@ -224,8 +224,8 @@
                                    android:id="@+id/profile_imag1e"
                                    android:layout_width="75dp"
                                    android:layout_height="75dp"
-                                   android:src="@drawable/girl"
-                                   app:civ_border_width="1dp"
+                                   android:src="@drawable/logo_lok"
+
                                    android:layout_marginBottom="5dp"
                                    app:civ_border_color="#000"/>
 
