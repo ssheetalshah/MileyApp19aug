@@ -60,7 +60,9 @@
                             android:text="Bhopal, India"
                             android:textColor="#000"
                             android:textSize="15dp" />
+
                     </LinearLayout>
+
                 </android.support.v7.widget.CardView>
 
                 <LinearLayout
@@ -139,22 +141,22 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:gravity="end"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="10dp"
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:gravity="end"
+                    android:orientation="vertical">
 
                     <Button
                         android:id="@+id/addReview"
-                        android:text="Add Review"
-                        android:elevation="4dp"
-                        android:textAllCaps="false"
-                        android:textColor="@color/colorPrimary"
-                        android:background="@drawable/bt_background"
                         android:layout_width="wrap_content"
-                        android:layout_height="40dp" />
+                        android:layout_height="40dp"
+                        android:background="@drawable/bt_background"
+                        android:elevation="4dp"
+                        android:text="Add Review"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary" />
 
                 </LinearLayout>
 

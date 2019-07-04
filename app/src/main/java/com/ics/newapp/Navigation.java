@@ -68,7 +68,9 @@ public class Navigation extends AppCompatActivity
         FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
         tx.replace(R.id.content_frame, new MapFregment());
         tx.commit();
-//*********************************************************************************
+
+       //*********************************************************************************
+
         LocationManager lm = (LocationManager) Navigation.this.getSystemService(Context.LOCATION_SERVICE);
         boolean gps_enabled = false;
         boolean network_enabled = false;
@@ -110,8 +112,8 @@ public class Navigation extends AppCompatActivity
             alert.show();
         }
 
+        //***************************************************************************************
 
-//************************************************************************************************
         ll_mlist = findViewById(R.id.mlist);
         ll_create_act = findViewById(R.id.create_act);
         share_id = findViewById(R.id.share_id);
@@ -141,10 +143,12 @@ public class Navigation extends AppCompatActivity
                 ft.commit();
             }
         });
-//***************************************************************************************
+
+        //***************************************************************************************
+
         fav_list = (LinearLayout) findViewById(R.id.fav_list);
         add_event = (LinearLayout) findViewById(R.id.add_event1);
-        view_profile = (LinearLayout)findViewById(R.id.provile_view1);
+        view_profile = (LinearLayout) findViewById(R.id.provile_view1);
         btn_L_view = findViewById(R.id.l_view);
         btn_M_view = findViewById(R.id.m_view);
 
@@ -154,7 +158,7 @@ public class Navigation extends AppCompatActivity
         profile_image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Navigation.this,UserProfActivity.class);
+                Intent intent = new Intent(Navigation.this, UserProfActivity.class);
                 startActivity(intent);
             }
         });
@@ -218,7 +222,7 @@ public class Navigation extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-   //     NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        //     NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
