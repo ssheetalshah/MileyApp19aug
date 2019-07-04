@@ -9,45 +9,45 @@
 
         <item
             android:id="@+id/nav_homePage"
-            android:icon="@drawable/homee"
+            android:icon="@drawable/home_page"
             android:title="Home" />
         <item
             android:id="@+id/nav_profile"
-            android:icon="@drawable/profilep"
+            android:icon="@drawable/profiles_icon"
             android:title="Profile" />
         <item
             android:id="@+id/nav_my_acti"
-            android:icon="@drawable/myactii"
+            android:icon="@drawable/my_act"
             android:title="My activities" />
 
         <item
             android:id="@+id/nav_fav"
-            android:icon="@drawable/fav"
+            android:icon="@drawable/favourite_icon"
             android:title="Fav" />
         <item
             android:id="@+id/nav_bookmark"
-            android:icon="@drawable/bookmarkk"
+            android:icon="@drawable/ic_bookmark_border_black_24dp"
             android:title="Bookmark" />
 
         <item
             android:id="@+id/nav_share"
-            android:icon="@drawable/shares"
+            android:icon="@drawable/share_icon"
             android:title="Share" />
         <item
             android:id="@+id/nav_contact"
-            android:icon="@drawable/contactuss"
+            android:icon="@drawable/cont_us"
             android:title="Contact us" />
         <item
             android:id="@+id/nav_about"
-            android:icon="@drawable/aboutus"
+            android:icon="@drawable/profiles_icon"
             android:title="About us" />
         <item
             android:id="@+id/nav_help"
-            android:icon="@drawable/faq"
+            android:icon="@drawable/help"
             android:title="Help" />
         <item
             android:id="@+id/nav_feedback"
-            android:icon="@drawable/feedback"
+            android:icon="@drawable/feed_back"
             android:title="Feedback" />
 
     </group>
@@ -56,7 +56,7 @@
         android:id="@+id/g2">
             <item
                 android:id="@+id/nav_logout"
-                android:icon="@drawable/log"
+                android:icon="@drawable/logout_i"
                 android:title="Logout" />
     </group>
 

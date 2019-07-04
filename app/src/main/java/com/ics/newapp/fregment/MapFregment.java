@@ -27,7 +27,9 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -65,6 +67,7 @@ import java.util.List;
 public class MapFregment extends Fragment implements OnMapReadyCallback,
         com.google.android.gms.location.LocationListener, GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener {
+
     LinearLayout fav_list, add_event, view_profile;
     protected LocationManager locationManager;
     protected LocationListener locationListener;
@@ -77,7 +80,8 @@ public class MapFregment extends Fragment implements OnMapReadyCallback,
     Geocoder geocoder;
     LocationRequest mLocationRequest;
 
-
+    View mapview;
+    ImageView iv_add_event,iv_profiles;
 
     @Nullable
     @Override
@@ -135,12 +139,16 @@ public class MapFregment extends Fragment implements OnMapReadyCallback,
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        //this.mapview=view;
         //you can set the title for your
         // toolbar here for different fragments different titles
         getActivity().setTitle("Miley");
         SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager()
                 .findFragmentById(R.id.map);
+        mapview = mapFragment.getView();
         mapFragment.getMapAsync(this);
+
 
         fav_list=(LinearLayout)view.findViewById(R.id.fav_list);
         add_event=(LinearLayout)view.findViewById(R.id.add_event);
@@ -148,19 +156,25 @@ public class MapFregment extends Fragment implements OnMapReadyCallback,
         btn_L_view=view.findViewById(R.id.l_view);
         btn_M_view=view.findViewById(R.id.m_view);
 
-        fav_list.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Fragment Favorite_List=new Favorite_list();
-                FragmentManager fragmentManager = getFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.content_frame,Favorite_List).addToBackStack(null);
-                fragmentTransaction.commit();
-                fragmentTransaction.addToBackStack(null);
-            }
-        });
+        iv_profiles=view.findViewById(R.id.iv_profiles);
+        iv_add_event=view.findViewById(R.id.iv_add_event);
 
-        view_profile.setOnClickListener(new View.OnClickListener() {
+
+
+        //*****************************************************************************
+//        fav_list.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Fragment Favorite_List=new Favorite_list();
+//                FragmentManager fragmentManager = getFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.content_frame,Favorite_List).addToBackStack(null);
+//                fragmentTransaction.commit();
+//                fragmentTransaction.addToBackStack(null);
+//            }
+//        });
+
+        iv_profiles.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Fragment profile_List=new profile_fragment();
@@ -172,23 +186,23 @@ public class MapFregment extends Fragment implements OnMapReadyCallback,
             }
         });
 
-        btn_L_view.setOnClickListener(new View.OnClickListener() {
+//        btn_L_view.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Fragment listview=new ListFragment();
+//                FragmentManager fragmentManager = getFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.content_frame,listview).addToBackStack(null);
+//                fragmentTransaction.commit();
+//                fragmentTransaction.addToBackStack(null);
+//
+//            }
+//        });
+
+        iv_add_event.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment listview=new ListFragment();
-                FragmentManager fragmentManager = getFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.content_frame,listview).addToBackStack(null);
-                fragmentTransaction.commit();
-                fragmentTransaction.addToBackStack(null);
-
-            }
-        });
-
-        add_event.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Fragment add_event=new Host_Event_Screen();
+                Fragment add_event=new Create_Activity();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.content_frame,add_event).addToBackStack(null);
@@ -211,11 +225,29 @@ public class MapFregment extends Fragment implements OnMapReadyCallback,
                     == PackageManager.PERMISSION_GRANTED) {
                 buildGoogleApiClient();
                 mMap.setMyLocationEnabled(true);
+
+              View locationButton = ((View) mapview.findViewById(Integer.parseInt("1")).getParent()).findViewById(Integer.parseInt("2"));
+                RelativeLayout.LayoutParams rlp = (RelativeLayout.LayoutParams) locationButton.getLayoutParams();
+        // position on right bottom
+                rlp.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
+                rlp.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
+                rlp.setMargins(0, 0, 30, 30);
+
+
+
             }
         }
         else {
             buildGoogleApiClient();
             mMap.setMyLocationEnabled(true);
+
+            View locationButton = ((View) mapview.findViewById(Integer.parseInt("1")).getParent()).findViewById(Integer.parseInt("2"));
+            RelativeLayout.LayoutParams rlp = (RelativeLayout.LayoutParams) locationButton.getLayoutParams();
+            // position on right bottom
+            rlp.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
+            rlp.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
+            rlp.setMargins(0, 0, 30, 30);
+
         }
 
     }
