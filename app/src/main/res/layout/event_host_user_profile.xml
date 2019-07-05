@@ -152,11 +152,11 @@
                         android:id="@+id/addReview"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
-                        android:background="@drawable/bt_background"
+                        android:background="@drawable/btn_bg_new"
                         android:elevation="4dp"
                         android:text="Add Review"
                         android:textAllCaps="false"
-                        android:textColor="@color/colorPrimary" />
+                        android:textColor="#fff" />
 
                 </LinearLayout>
 

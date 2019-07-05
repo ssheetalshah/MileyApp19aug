@@ -49,6 +49,10 @@
             android:id="@+id/nav_feedback"
             android:icon="@drawable/feed_back"
             android:title="Feedback" />
+        <item
+            android:id="@+id/faq"
+            android:icon="@drawable/feed_back"
+            android:title="FAQ" />
 
     </group>
 

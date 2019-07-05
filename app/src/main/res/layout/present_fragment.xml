@@ -30,6 +30,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:orientation="vertical"
+                        android:background="@color/colorPrimary"
                         android:weightSum="1">
 
 
@@ -59,7 +60,7 @@
                         android:layout_height="40dp"
                         android:layout_marginRight="5dp"
                         android:layout_weight="0.50"
-                        android:background="@drawable/bgcolor"
+                        android:background="@drawable/btn_bg_new"
                         android:text="Present"
                         android:textAllCaps="false"
                         android:textColor="#fff" />

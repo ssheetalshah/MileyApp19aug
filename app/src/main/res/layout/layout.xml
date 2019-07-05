@@ -27,7 +27,7 @@
         android:elevation="4dp"
         android:textAllCaps="false"
         android:id="@+id/btn_dialog"
-        android:background="@drawable/bgcolor"
+        android:background="@drawable/btn_bg_new"
         android:layout_marginRight="50dp"
         android:layout_marginLeft="50dp"
         android:gravity="center_vertical|center_horizontal"

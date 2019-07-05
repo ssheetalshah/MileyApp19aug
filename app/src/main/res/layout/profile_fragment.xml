@@ -104,17 +104,31 @@
                     android:layout_margin="10dp"
                     android:orientation="vertical">
 
-                    <TextView
+                    <LinearLayout
+                        android:weightSum="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:drawableLeft="@drawable/mb"
-                        android:drawablePadding="5dp"
-                        android:gravity="left|center"
-                        android:text="Mobile No"
-                        android:textColor="#000"
-                        android:textSize="15dp"
-                        android:textStyle="bold" />
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/mb"
+                            />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="start|center"
+                            android:textColor="#000"
+                            android:text="Mobile"
+                            android:textSize="15dp"
+                            />
+
+                    </LinearLayout>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -135,23 +149,37 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:weightSum="1">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
+                        <LinearLayout
                             android:layout_weight="0.5"
-                            android:drawableLeft="@drawable/add"
-                            android:drawablePadding="5dp"
-                            android:gravity="left|center"
-                            android:text="Primary Address"
-                            android:textColor="#000"
-                            android:textSize="15dp"
-                            android:textStyle="bold" />
+                            android:weightSum="1"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/locationicon"
+                                />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="start|center"
+                                android:textColor="#000"
+                                android:text="Primary Address"
+                                android:textSize="15dp"
+                                android:background="@null"
+                                />
+
+                        </LinearLayout>
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -160,6 +188,7 @@
                             android:gravity="right"
                             android:text="Manage Address"
                             android:textColor="#546BE9" />
+
                     </LinearLayout>
 
                     <TextView
@@ -185,19 +214,33 @@
                         android:orientation="horizontal"
                         android:weightSum="1">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
+                        <LinearLayout
                             android:layout_weight="0.5"
-                            android:drawableLeft="@drawable/add"
-                            android:drawablePadding="5dp"
-                            android:gravity="left|center"
-                            android:text="Secondary Address"
-                            android:textColor="#000"
-                            android:textSize="15dp"
-                            android:textStyle="bold" />
+                            android:weightSum="1"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/locationicon"
+                                />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="start|center"
+                                android:textColor="#000"
+                                android:text="Secondary Address"
+                                android:textSize="15dp"
+                                android:background="@null"
+                                />
+
+                        </LinearLayout>
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"

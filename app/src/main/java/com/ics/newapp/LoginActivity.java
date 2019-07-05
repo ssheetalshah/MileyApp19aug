@@ -1,6 +1,7 @@
 package com.ics.newapp;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,7 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity {
-    TextView btn_login;
+    Button btn_login;
     TextView signup;
 
     @Override
@@ -18,9 +19,11 @@ public class LoginActivity extends AppCompatActivity {
 
        // getSupportActionBar().setTitle("Login");
 
-        btn_login = (TextView)findViewById(R.id.btn_login);
+        btn_login = findViewById(R.id.btn_login);
         signup = (TextView)findViewById(R.id.btn_signup);
 
+
+//********************************************************************
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

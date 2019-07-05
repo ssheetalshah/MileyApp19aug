@@ -54,7 +54,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="25dp"
                     android:layout_weight="0.80"
-                    android:src="@drawable/contctus" />
+                    android:src="@drawable/nameicon" />
 
                 <LinearLayout
                     android:orientation="vertical"
@@ -117,7 +117,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="25dp"
                     android:layout_weight="0.80"
-                    android:src="@drawable/info" />
+                    android:src="@drawable/about_icon" />
 
                 <TextView
                     android:layout_width="match_parent"

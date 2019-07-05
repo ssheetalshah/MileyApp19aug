@@ -71,23 +71,23 @@ public class Create_Activity extends Fragment implements
         });
 
         //Getting the instance of Spinner and applying OnItemSelectedListener on it
-        act_deact = view.findViewById(R.id.act_deact);
-        act_deact.setOnItemSelectedListener(this);
-
-        act_event = view.findViewById(R.id.act_event);
-        act_event.setOnItemSelectedListener(this);
+//        act_deact = view.findViewById(R.id.act_deact);
+//        act_deact.setOnItemSelectedListener(this);
+//
+//        act_event = view.findViewById(R.id.act_event);
+//        act_event.setOnItemSelectedListener(this);
 
         //Creating the ArrayAdapter instance having the country list
         ArrayAdapter aa = new ArrayAdapter(getActivity(), android.R.layout.simple_spinner_item, country);
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         //Setting the ArrayAdapter data on the Spinner
-        act_deact.setAdapter(aa);
+       // act_deact.setAdapter(aa);
 
         //Creating the ArrayAdapter instance having the country list
         ArrayAdapter bb = new ArrayAdapter(getActivity(), android.R.layout.simple_spinner_item, event);
         bb.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         //Setting the ArrayAdapter data on the Spinner
-        act_event.setAdapter(bb);
+      //  act_event.setAdapter(bb);
 
     }
 

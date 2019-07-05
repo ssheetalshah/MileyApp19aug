@@ -30,6 +30,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:orientation="vertical"
+                        android:background="@color/colorPrimary"
                         android:weightSum="1">
 
 
@@ -59,7 +60,7 @@
                         android:layout_height="38dp"
                         android:layout_marginRight="5dp"
                         android:layout_weight="0.50"
-                        android:background="@drawable/bgcolor"
+                        android:background="@drawable/btn_bg_new"
                         android:text="Join"
                         android:textAllCaps="false"
                         android:textColor="#fff" />
@@ -233,7 +234,7 @@
                             android:layout_weight="0.5"
                             android:gravity="right"
                             android:text="View Comments"
-                            android:textColor="#64E9FA"
+                            android:textColor="#fff"
                             android:textSize="15dp"
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -343,7 +344,7 @@
                                         android:layout_height="40dp"
                                         android:layout_marginRight="5dp"
                                         android:layout_weight="0.50"
-                                        android:background="@drawable/bgcolor"
+                                        android:background="@drawable/btn_bg_new"
                                         android:text="View"
                                         android:textAllCaps="false"
                                         android:textColor="#fff" />
@@ -352,7 +353,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="40dp"
                                         android:layout_weight="0.50"
-                                        android:background="@drawable/bgcolor"
+                                        android:background="@drawable/btn_bg_new"
                                         android:text="Join"
                                         android:textAllCaps="false"
                                         android:textColor="#fff" />

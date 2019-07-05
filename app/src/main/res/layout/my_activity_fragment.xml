@@ -118,7 +118,7 @@
                                 android:layout_gravity="center"
                                 android:layout_marginRight="5dp"
                                 android:layout_weight="0.50"
-                                android:background="@drawable/bgcolor"
+                                android:background="@drawable/btn_bg_new"
                                 android:text="View"
                                 android:textAllCaps="false"
                                 android:textColor="#fff" />
@@ -129,7 +129,7 @@
                                 android:layout_height="40dp"
                                 android:layout_weight="0.50"
                                 android:layout_gravity="center"
-                                android:background="@drawable/bgcolor"
+                                android:background="@drawable/btn_bg_new"
                                 android:text="Delete"
                                 android:textAllCaps="false"
                                 android:textColor="#fff" />
