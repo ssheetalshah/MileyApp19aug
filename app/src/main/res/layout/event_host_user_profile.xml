@@ -20,13 +20,12 @@
 
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
+                    android:layout_height="wrap_content">
 
                     <LinearLayout
-                        android:background="@drawable/gradientbackground"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/gradientbackground"
                         android:orientation="vertical"
                         android:weightSum="1">
 
@@ -39,8 +38,7 @@
                             android:layout_marginTop="15dp"
                             android:layout_marginBottom="5dp"
                             android:src="@drawable/logo_lok"
-                            app:civ_border_color="#000"
-                            />
+                            app:civ_border_color="#000" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -199,8 +197,7 @@
                                     android:layout_height="75dp"
                                     android:layout_marginBottom="5dp"
                                     android:src="@drawable/logo_lok"
-                                    app:civ_border_color="#000"
-                                    />
+                                    app:civ_border_color="#000" />
 
                                 <TextView
                                     android:layout_width="match_parent"

@@ -61,8 +61,7 @@
                                     android:layout_height="75dp"
                                     android:layout_marginBottom="5dp"
                                     android:src="@drawable/logo_lok"
-                                    app:civ_border_color="#000"
-                                    />
+                                    app:civ_border_color="#000" />
 
                                 <TextView
                                     android:layout_width="match_parent"
@@ -125,9 +124,9 @@
                                     <Button
                                         android:layout_width="match_parent"
                                         android:layout_height="40dp"
+                                        android:layout_gravity="center"
                                         android:layout_marginRight="5dp"
                                         android:layout_weight="0.50"
-                                        android:layout_gravity="center"
                                         android:background="@drawable/btn_bg_new"
                                         android:text="View"
                                         android:textAllCaps="false"
@@ -136,8 +135,8 @@
                                     <Button
                                         android:layout_width="match_parent"
                                         android:layout_height="40dp"
-                                        android:layout_weight="0.50"
                                         android:layout_gravity="center"
+                                        android:layout_weight="0.50"
                                         android:background="@drawable/btn_bg_new"
                                         android:text="Select"
                                         android:textAllCaps="false"
@@ -192,8 +191,7 @@
                                     android:layout_height="75dp"
                                     android:layout_marginBottom="5dp"
                                     android:src="@drawable/logo_lok"
-                                    app:civ_border_color="#000"
-                                    />
+                                    app:civ_border_color="#000" />
 
                                 <TextView
                                     android:layout_width="match_parent"
@@ -256,8 +254,8 @@
                                     <Button
                                         android:layout_width="match_parent"
                                         android:layout_height="40dp"
-                                        android:layout_marginRight="5dp"
                                         android:layout_gravity="center"
+                                        android:layout_marginRight="5dp"
                                         android:layout_weight="0.50"
                                         android:background="@drawable/btn_bg_new"
                                         android:text="View"
@@ -267,8 +265,8 @@
                                     <Button
                                         android:layout_width="match_parent"
                                         android:layout_height="40dp"
-                                        android:layout_weight="0.50"
                                         android:layout_gravity="center"
+                                        android:layout_weight="0.50"
                                         android:background="@drawable/btn_bg_new"
                                         android:text="Select"
                                         android:textAllCaps="false"

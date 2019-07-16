@@ -6,18 +6,18 @@
     tools:context=".fregment.ListFragment">
 
     <LinearLayout
-        android:weightSum="1"
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
 
 
         <LinearLayout
-            android:layout_weight="0.10"
-           android:layout_marginTop="15dp"
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_weight="0.10"
+            android:orientation="vertical">
 
             <!--<android.support.v7.widget.RecyclerView-->
             <!--android:layout_width="match_parent"-->
@@ -28,112 +28,110 @@
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                >
+                android:layout_margin="5dp">
 
                 <LinearLayout
-                    android:weightSum="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
                     android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:weightSum="1">
 
                     <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_weight="0.70"
                         android:gravity="center"
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:orientation="vertical">
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                             android:id="@+id/profile_image"
                             android:layout_width="75dp"
                             android:layout_height="75dp"
-                            android:src="@drawable/logo_lok"
                             android:layout_marginBottom="5dp"
-                            app:civ_border_color="#000"/>
+                            android:src="@drawable/logo_lok"
+                            app:civ_border_color="#000" />
 
                         <TextView
-                            android:text="Ms Alina"
-                            android:gravity="center"
-                            android:textSize="11dp"
-                            android:textColor="#000"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Ms Alina"
+                            android:textColor="#000"
+                            android:textSize="11dp" />
 
                         <RatingBar
                             style="@style/RatingBar"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:stepSize="1.0"
+                            android:layout_gravity="center"
                             android:isIndicator="true"
                             android:numStars="5"
-                            android:layout_gravity="center"
+                            android:progressTint="@color/colorRating"
                             android:rating="1.0"
-                            android:progressTint="@color/colorRating" />
+                            android:stepSize="1.0" />
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_weight="0.30"
-                        android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.30"
+                        android:orientation="vertical">
 
                         <TextView
-                            android:textColor="#000"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_marginBottom="3dp"
                             android:text="New Year Celebration"
-                            android:textSize="14dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:textColor="#000"
+                            android:textSize="14dp" />
 
                         <TextView
-                            android:textColor="#000"
-                            android:textSize="11dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_marginBottom="3dp"
                             android:text="Pari chowk market"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:textColor="#000"
+                            android:textSize="11dp" />
 
                         <TextView
-                            android:textColor="#000"
-                            android:text="Mar 2019 23"
-                            android:textSize="11dp"
-                            android:layout_marginBottom="3dp"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:text="Mar 2019 23"
+                            android:textColor="#000"
+                            android:textSize="11dp" />
 
                         <LinearLayout
-                            android:weightSum="1"
-                            android:orientation="horizontal"
-                            android:layout_margin="5dp"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
 
                             <Button
                                 android:id="@+id/fav_details"
-                                android:text="View"
-                                android:textAllCaps="false"
-                                android:layout_weight="0.50"
-                                android:textColor="#fff"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
                                 android:layout_gravity="center"
                                 android:layout_marginRight="5dp"
+                                android:layout_weight="0.50"
                                 android:background="@drawable/btn_bg_new"
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp" />
+                                android:text="View"
+                                android:textAllCaps="false"
+                                android:textColor="#fff" />
 
                             <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.50"
+                                android:background="@drawable/btn_bg_new"
                                 android:text="Remove"
                                 android:textAllCaps="false"
-                                android:layout_weight="0.50"
-                                android:textColor="#fff"
-                                android:layout_gravity="center"
-                                android:background="@drawable/btn_bg_new"
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp" />
+                                android:textColor="#fff" />
 
                         </LinearLayout>
 
@@ -144,8 +142,6 @@
             </android.support.v7.widget.CardView>
 
         </LinearLayout>
-
-
 
 
     </LinearLayout>

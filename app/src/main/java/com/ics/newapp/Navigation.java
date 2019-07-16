@@ -108,6 +108,7 @@ public class Navigation extends AppCompatActivity
 
                 }
             });
+
             final AlertDialog alert = dialog.create();
             alert.show();
         }

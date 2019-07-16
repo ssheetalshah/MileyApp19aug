@@ -8,10 +8,10 @@
     tools:context=".RegistrationActivity">
 
     <!--<ImageView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:scaleType="fitXY"-->
-        <!--android:src="@drawable/screen" />-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:scaleType="fitXY"-->
+    <!--android:src="@drawable/screen" />-->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,156 +35,140 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:weightSum="1"
-                    android:gravity="center"
-                    android:background="@drawable/et_bg"
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:layout_height="wrap_content">
+                    android:background="@drawable/et_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
 
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:src="@drawable/name_icon"
-                        />
+                        android:src="@drawable/name_icon" />
 
                     <View
                         android:layout_width="2dp"
                         android:layout_height="22dp"
-                        android:background="#0FA315"
                         android:layout_marginLeft="5dp"
-                        >
-                    </View>
+                        android:background="#0FA315"></View>
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
+                        android:background="@null"
                         android:gravity="start|center"
                         android:hint="Enter Name"
                         android:inputType="number"
                         android:textColor="#000"
                         android:textColorHint="#000"
-                        android:textSize="15dp"
-                        android:background="@null"
-                        />
+                        android:textSize="15dp" />
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:weightSum="1"
-                    android:gravity="center"
-                    android:background="@drawable/et_bg"
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:layout_height="wrap_content">
+                    android:background="@drawable/et_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
 
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:src="@drawable/mb"
-                        />
+                        android:src="@drawable/mb" />
 
                     <View
                         android:layout_width="2dp"
                         android:layout_height="22dp"
-                        android:background="#0FA315"
                         android:layout_marginLeft="5dp"
-                        >
-                    </View>
+                        android:background="#0FA315"></View>
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
+                        android:background="@null"
                         android:gravity="start|center"
                         android:hint="Enter Mobile No."
                         android:inputType="number"
                         android:textColor="#000"
                         android:textColorHint="#000"
-                        android:textSize="15dp"
-                        android:background="@null"
-                        />
+                        android:textSize="15dp" />
 
                 </LinearLayout>
 
 
                 <LinearLayout
-                    android:weightSum="1"
-                    android:gravity="center"
-                    android:background="@drawable/et_bg"
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:layout_height="wrap_content">
+                    android:background="@drawable/et_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
 
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:src="@drawable/pss"
-                        />
+                        android:src="@drawable/pss" />
 
                     <View
                         android:layout_width="2dp"
                         android:layout_height="22dp"
-                        android:background="#0FA315"
                         android:layout_marginLeft="5dp"
-                        >
-                    </View>
+                        android:background="#0FA315"></View>
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
+                        android:background="@null"
                         android:gravity="start|center"
                         android:hint="Enter Password"
                         android:inputType="number"
                         android:textColor="#000"
                         android:textColorHint="#000"
-                        android:textSize="15dp"
-                        android:background="@null"
-                        />
+                        android:textSize="15dp" />
 
                 </LinearLayout>
 
 
                 <LinearLayout
-                    android:weightSum="1"
-                    android:gravity="center"
-                    android:background="@drawable/et_bg"
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:layout_height="wrap_content">
+                    android:background="@drawable/et_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
 
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:src="@drawable/pss"
-                        />
+                        android:src="@drawable/pss" />
 
                     <View
                         android:layout_width="2dp"
                         android:layout_height="22dp"
-                        android:background="#0FA315"
                         android:layout_marginLeft="5dp"
-                        >
-                    </View>
+                        android:background="#0FA315"></View>
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
+                        android:background="@null"
                         android:gravity="start|center"
                         android:hint="Enter Re Password"
                         android:inputType="number"
                         android:textColor="#000"
                         android:textColorHint="#000"
-                        android:textSize="15dp"
-                        android:background="@null"
-                        />
+                        android:textSize="15dp" />
 
                 </LinearLayout>
 
@@ -193,12 +177,12 @@
                     android:id="@+id/btn_login"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
                     android:layout_gravity="center"
-                    android:text="Sign Up"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/myfont"
                     android:background="@drawable/signin_bg"
+                    android:fontFamily="@font/myfont"
+                    android:gravity="center"
+                    android:text="Sign Up"
                     android:textAllCaps="false"
                     android:textColor="#fff"
                     android:textSize="22dp"
@@ -221,24 +205,24 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Already have account?"
-                android:textSize="16dp"
                 android:gravity="center"
-                android:textStyle="normal"
-                android:typeface="serif"
+                android:text="Already have account?"
                 android:textAllCaps="false"
-                android:textColor="#fff" />
+                android:textColor="#fff"
+                android:textSize="16dp"
+                android:textStyle="normal"
+                android:typeface="serif" />
 
             <TextView
                 android:id="@+id/sign"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sign In"
                 android:gravity="center"
-                android:textSize="22dp"
-                android:typeface="serif"
+                android:text="Sign In"
                 android:textAllCaps="false"
-                android:textColor="#2BA311" />
+                android:textColor="#2BA311"
+                android:textSize="22dp"
+                android:typeface="serif" />
         </LinearLayout>
 
     </LinearLayout>

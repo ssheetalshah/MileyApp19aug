@@ -1,40 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="300dp"
-    android:padding="15dp"
-    android:background="#ffffffff">
+    android:background="#ffffffff"
+    android:orientation="vertical"
+    android:padding="15dp">
 
     <EditText
-        android:elevation="4dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/comment_bg"
+        android:id="@+id/text_dialog"
         android:layout_width="match_parent"
         android:layout_height="160dp"
-        android:id="@+id/text_dialog"
-        android:textSize="13dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/comment_bg"
+        android:elevation="4dp"
+        android:gravity="start"
         android:hint="Send your Comments.."
         android:textColor="#ff000000"
         android:textColorHint="#000"
-        android:layout_marginBottom="25dp"
-        android:gravity="start"/>
+        android:textSize="13dp" />
 
     <Button
+        android:id="@+id/btn_dialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Send"
-        android:elevation="4dp"
-        android:textAllCaps="false"
-        android:id="@+id/btn_dialog"
-        android:background="@drawable/btn_bg_new"
-        android:layout_marginRight="50dp"
-        android:layout_marginLeft="50dp"
-        android:gravity="center_vertical|center_horizontal"
         android:layout_below="@+id/text_dialog"
         android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/btn_bg_new"
+        android:elevation="4dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Send"
+        android:textAllCaps="false"
         android:textColor="#ffffffff" />
-
 
 
 </RelativeLayout>

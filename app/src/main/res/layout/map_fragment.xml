@@ -1,98 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fregment.MapFregment">
 
-            <LinearLayout
-                android:weightSum="1"
-                android:orientation="vertical"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:id="@+id/rlMapLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2"
+            android:orientation="vertical">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent" />
+        </RelativeLayout>
 
-                <RelativeLayout
-                    android:id="@+id/rlMapLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1.2"
-                    android:orientation="vertical" >
-
-                    <fragment
-                        android:id="@+id/map"
-                        android:name="com.google.android.gms.maps.SupportMapFragment"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
-                </RelativeLayout>
-
-            </LinearLayout>
+    </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal"
         android:weightSum="1">
 
-    <LinearLayout
-        android:layout_margin="5dp"
-        android:layout_weight="0.2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    <ImageView
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:src="@drawable/filter_icon"
-        />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_weight="0.8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <ImageView
-            android:id="@+id/iv_add_event"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:src="@drawable/add_event_icon"
-            />
+            android:layout_weight="0.2">
 
-        <ImageView
-            android:id="@+id/iv_profiles"
-            android:layout_margin="5dp"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:src="@drawable/profiles_icon"
-            />
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/filter_icon" />
+        </LinearLayout>
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_add_event"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/add_event_icon" />
+
+            <ImageView
+                android:id="@+id/iv_profiles"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/profiles_icon" />
+
+        </LinearLayout>
     </LinearLayout>
     <!--//***************************************-->
 
     <android.support.v7.widget.CardView
-        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        >
+        android:visibility="gone">
+
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#fff"
-            android:gravity="bottom"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:weightSum="1"
-            >
+            android:background="#fff"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:weightSum="1">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -109,23 +106,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:orientation="vertical"
                     android:layout_weight="0.33"
-                    >
+                    android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
-                        android:src="@drawable/favorite_icon"
                         android:layout_gravity="center"
-                        />
+                        android:src="@drawable/favorite_icon" />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Add Fav"
-                        android:textSize="10dp"
-                        android:textColor="#000"
                         android:textAlignment="center"
-                        />
+                        android:textColor="#000"
+                        android:textSize="10dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -133,23 +129,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:orientation="vertical"
                     android:layout_weight="0.33"
-                    >
+                    android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
-                        android:src="@drawable/add_people"
                         android:layout_gravity="center"
-                        />
+                        android:src="@drawable/add_people" />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Add Event"
-                        android:textSize="10dp"
-                        android:textColor="#000"
                         android:textAlignment="center"
-                        />
+                        android:textColor="#000"
+                        android:textSize="10dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -157,23 +152,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:orientation="vertical"
                     android:layout_weight="0.33"
-                    >
+                    android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
-                        android:src="@drawable/profiles_icon"
                         android:layout_gravity="center"
-                        />
+                        android:src="@drawable/profiles_icon" />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Add Profile"
-                        android:textSize="10dp"
-                        android:textColor="#000"
                         android:textAlignment="center"
-                        />
+                        android:textColor="#000"
+                        android:textSize="10dp" />
                 </LinearLayout>
 
 
@@ -183,10 +177,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
-                android:orientation="horizontal"
                 android:layout_weight="0.5"
-                android:weightSum="1"
-                >
+                android:orientation="horizontal"
+                android:weightSum="1">
+
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -194,18 +188,17 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="1dp"
                     android:layout_weight="0.5"
-                    android:background="@drawable/card_right_radius"
-                    >
+                    android:background="@drawable/card_right_radius">
 
                     <Button
                         android:id="@+id/m_view"
-                        android:text="M View"
-                        android:textSize="15dp"
-                        android:textColor="#C3F143"
-                        android:textAllCaps="false"
-                        android:background="@drawable/card_radius"
                         android:layout_width="match_parent"
-                        android:layout_height="40dp" />
+                        android:layout_height="40dp"
+                        android:background="@drawable/card_radius"
+                        android:text="M View"
+                        android:textAllCaps="false"
+                        android:textColor="#C3F143"
+                        android:textSize="15dp" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
@@ -215,18 +208,17 @@
                     android:layout_marginLeft="1dp"
                     android:layout_marginRight="10dp"
                     android:layout_weight="0.5"
-                    android:background="@drawable/card_right_radius"
-                    >
+                    android:background="@drawable/card_right_radius">
 
                     <Button
                         android:id="@+id/l_view"
-                        android:text="L View"
-                        android:textSize="15dp"
-                        android:textColor="#fff"
-                        android:textAllCaps="false"
-                        android:background="@drawable/card_right_radius"
                         android:layout_width="match_parent"
-                        android:layout_height="40dp" />
+                        android:layout_height="40dp"
+                        android:background="@drawable/card_right_radius"
+                        android:text="L View"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="15dp" />
                 </android.support.v7.widget.CardView>
 
             </LinearLayout>
