@@ -61,9 +61,6 @@ import java.io.IOException;
 import java.util.List;
 
 
-
-
-
 public class MapFregment extends Fragment implements OnMapReadyCallback,
         com.google.android.gms.location.LocationListener, GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener {
@@ -74,14 +71,15 @@ public class MapFregment extends Fragment implements OnMapReadyCallback,
     Button btn_M_view, btn_L_view;
     private GoogleMap mMap;
     Location mLastLocation;
-    Marker mCurrLocationMarker;
+    Marker mCurrLocationMarker, mCurrLocationMarker1, mCurrLocationMarker2;
     String addressstring;
     GoogleApiClient mGoogleApiClient;
     Geocoder geocoder;
     LocationRequest mLocationRequest;
+    Circle circle;
 
     View mapview;
-    ImageView iv_add_event,iv_profiles;
+    ImageView iv_add_event, iv_profiles;
 
     @Nullable
     @Override
@@ -150,62 +148,38 @@ public class MapFregment extends Fragment implements OnMapReadyCallback,
         mapFragment.getMapAsync(this);
 
 
-        fav_list=(LinearLayout)view.findViewById(R.id.fav_list);
-        add_event=(LinearLayout)view.findViewById(R.id.add_event);
-        view_profile=(LinearLayout)view.findViewById(R.id.provile_view);
-        btn_L_view=view.findViewById(R.id.l_view);
-        btn_M_view=view.findViewById(R.id.m_view);
+        fav_list = (LinearLayout) view.findViewById(R.id.fav_list);
+        add_event = (LinearLayout) view.findViewById(R.id.add_event);
+        view_profile = (LinearLayout) view.findViewById(R.id.provile_view);
+        btn_L_view = view.findViewById(R.id.l_view);
+        btn_M_view = view.findViewById(R.id.m_view);
 
-        iv_profiles=view.findViewById(R.id.iv_profiles);
-        iv_add_event=view.findViewById(R.id.iv_add_event);
-
+        iv_profiles = view.findViewById(R.id.iv_profiles);
+        iv_add_event = view.findViewById(R.id.iv_add_event);
 
 
         //*****************************************************************************
-//        fav_list.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Fragment Favorite_List=new Favorite_list();
-//                FragmentManager fragmentManager = getFragmentManager();
-//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//                fragmentTransaction.replace(R.id.content_frame,Favorite_List).addToBackStack(null);
-//                fragmentTransaction.commit();
-//                fragmentTransaction.addToBackStack(null);
-//            }
-//        });
 
         iv_profiles.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment profile_List=new profile_fragment();
+                Fragment profile_List = new profile_fragment();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.content_frame,profile_List).addToBackStack(null);
+                fragmentTransaction.replace(R.id.content_frame, profile_List).addToBackStack(null);
                 fragmentTransaction.commit();
                 fragmentTransaction.addToBackStack(null);
             }
         });
 
-//        btn_L_view.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Fragment listview=new ListFragment();
-//                FragmentManager fragmentManager = getFragmentManager();
-//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//                fragmentTransaction.replace(R.id.content_frame,listview).addToBackStack(null);
-//                fragmentTransaction.commit();
-//                fragmentTransaction.addToBackStack(null);
-//
-//            }
-//        });
 
         iv_add_event.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment add_event=new Create_Activity();
+                Fragment add_event = new Create_Activity();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.content_frame,add_event).addToBackStack(null);
+                fragmentTransaction.replace(R.id.content_frame, add_event).addToBackStack(null);
                 fragmentTransaction.commit();
                 fragmentTransaction.addToBackStack(null);
 
@@ -226,18 +200,65 @@ public class MapFregment extends Fragment implements OnMapReadyCallback,
                 buildGoogleApiClient();
                 mMap.setMyLocationEnabled(true);
 
-              View locationButton = ((View) mapview.findViewById(Integer.parseInt("1")).getParent()).findViewById(Integer.parseInt("2"));
+                View locationButton = ((View) mapview.findViewById(Integer.parseInt("1")).getParent()).findViewById(Integer.parseInt("2"));
                 RelativeLayout.LayoutParams rlp = (RelativeLayout.LayoutParams) locationButton.getLayoutParams();
-        // position on right bottom
+                // position on right bottom
                 rlp.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
                 rlp.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
                 rlp.setMargins(0, 0, 30, 30);
 
+                circle = mMap.addCircle(new CircleOptions()
+                        .center(new LatLng(22.6666, 75.8897))
+                        .radius(3000)
+                        .strokeColor(Color.LTGRAY)
+                        .fillColor(Color.LTGRAY));
+                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(22.6666, 75.8897), 15));
+                // Zoom in, animating the camera.
+                mMap.animateCamera(CameraUpdateFactory.zoomIn());
+                // Zoom out to zoom level 10, animating with a duration of 2 seconds.
+                mMap.animateCamera(CameraUpdateFactory.zoomTo(25), 2000, null);
+                //Place current location marker
+                try {
+                    List<Address> address = geocoder.getFromLocation(22.6666, 75.8897, 5);
+                    addressstring = address.get(0).getAddressLine(0);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                LatLng latLng1 = new LatLng(22.6666, 75.8897);
+                MarkerOptions markerOptions1 = new MarkerOptions();
+                markerOptions1.position(latLng1);
+                markerOptions1.title(addressstring);
+                markerOptions1.icon(BitmapDescriptorFactory.fromResource(R.drawable.pponee));
+                mCurrLocationMarker1 = mMap.addMarker(markerOptions1);
+
+
+                circle = mMap.addCircle(new CircleOptions()
+                        .center(new LatLng(22.72453, 75.88416))
+                        .radius(3000)
+                        .strokeColor(Color.LTGRAY)
+                        .fillColor(Color.LTGRAY));
+                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(22.72453, 75.88416), 15));
+                // Zoom in, animating the camera.
+                mMap.animateCamera(CameraUpdateFactory.zoomIn());
+                // Zoom out to zoom level 10, animating with a duration of 2 seconds.
+                mMap.animateCamera(CameraUpdateFactory.zoomTo(25), 2000, null);
+                //Place current location marker
+                try {
+                    List<Address> address = geocoder.getFromLocation(22.72453, 75.88416, 5);
+                    addressstring = address.get(0).getAddressLine(0);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                LatLng latLng2 = new LatLng(22.72453, 75.88416);
+                MarkerOptions markerOptions2 = new MarkerOptions();
+                markerOptions2.position(latLng2);
+                markerOptions2.title(addressstring);
+                markerOptions2.icon(BitmapDescriptorFactory.fromResource(R.drawable.pptwo));
+                mCurrLocationMarker2 = mMap.addMarker(markerOptions2);
 
 
             }
-        }
-        else {
+        } else {
             buildGoogleApiClient();
             mMap.setMyLocationEnabled(true);
 
@@ -262,10 +283,9 @@ public class MapFregment extends Fragment implements OnMapReadyCallback,
     }
 
 
-
     @Override
     public void onConnected(Bundle bundle) {
-        Log.d("location" , "jksfhdsd");
+        Log.d("location", "jksfhdsd");
         mLocationRequest = new LocationRequest();
         mLocationRequest.setInterval(1000);
         mLocationRequest.setFastestInterval(1000);
@@ -291,19 +311,19 @@ public class MapFregment extends Fragment implements OnMapReadyCallback,
             mCurrLocationMarker.remove();
         }
 
-        Circle circle = mMap.addCircle(new CircleOptions()
+        circle = mMap.addCircle(new CircleOptions()
                 .center(new LatLng(location.getLatitude(), location.getLongitude()))
                 .radius(3000)
                 .strokeColor(Color.LTGRAY)
                 .fillColor(Color.LTGRAY));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude() , location.getLongitude()),15));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), 15));
         // Zoom in, animating the camera.
         mMap.animateCamera(CameraUpdateFactory.zoomIn());
         // Zoom out to zoom level 10, animating with a duration of 2 seconds.
         mMap.animateCamera(CameraUpdateFactory.zoomTo(25), 2000, null);
         //Place current location marker
         try {
-            List<Address> address = geocoder.getFromLocation(location.getLatitude() , location.getLongitude() , 5);
+            List<Address> address = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 5);
             addressstring = address.get(0).getAddressLine(0);
         } catch (IOException e) {
             e.printStackTrace();
@@ -312,12 +332,13 @@ public class MapFregment extends Fragment implements OnMapReadyCallback,
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(latLng);
         markerOptions.title(addressstring);
-        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.greenone));
+        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.ppthree));
         mCurrLocationMarker = mMap.addMarker(markerOptions);
-        Log.e("location is" , ""+location.getLatitude());
+        Log.e("location is", "" + location.getLatitude());
         //move map camera
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(11));
+
 
         //stop location updates
         if (mGoogleApiClient != null) {
@@ -330,7 +351,6 @@ public class MapFregment extends Fragment implements OnMapReadyCallback,
     public void onConnectionFailed(ConnectionResult connectionResult) {
 
     }
-
 
 
 }

@@ -17,7 +17,7 @@
             android:title="Profile" />
         <item
             android:id="@+id/nav_my_acti"
-            android:icon="@drawable/my_act"
+            android:icon="@drawable/myactivities"
             android:title="My activities" />
 
         <item
@@ -26,7 +26,7 @@
             android:title="Fav" />
         <item
             android:id="@+id/nav_bookmark"
-            android:icon="@drawable/ic_bookmark_border_black_24dp"
+            android:icon="@drawable/bookmk"
             android:title="Bookmark" />
 
         <item
@@ -35,7 +35,7 @@
             android:title="Share" />
         <item
             android:id="@+id/nav_contact"
-            android:icon="@drawable/cont_us"
+            android:icon="@drawable/contactus"
             android:title="Contact us" />
         <item
             android:id="@+id/nav_about"
@@ -43,15 +43,15 @@
             android:title="About us" />
         <item
             android:id="@+id/nav_help"
-            android:icon="@drawable/help"
+            android:icon="@drawable/helpp"
             android:title="Help" />
         <item
             android:id="@+id/nav_feedback"
-            android:icon="@drawable/feed_back"
+            android:icon="@drawable/feedbackk"
             android:title="Feedback" />
         <item
             android:id="@+id/faq"
-            android:icon="@drawable/feed_back"
+            android:icon="@drawable/faqqq"
             android:title="FAQ" />
 
     </group>
@@ -60,7 +60,7 @@
         android:id="@+id/g2">
             <item
                 android:id="@+id/nav_logout"
-                android:icon="@drawable/logout_i"
+                android:icon="@drawable/logoutttt"
                 android:title="Logout" />
     </group>
 

@@ -17,9 +17,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/logo_new"
+        android:icon="@drawable/logone"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/logo_new"
+        android:roundIcon="@drawable/logone"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".UserProfActivity"></activity>

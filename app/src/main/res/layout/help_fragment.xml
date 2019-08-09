@@ -28,7 +28,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="25dp"
                     android:layout_weight="0.80"
-                    android:src="@drawable/faq" />
+                    android:src="@drawable/faqqq" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -54,7 +54,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="25dp"
                     android:layout_weight="0.80"
-                    android:src="@drawable/nameicon" />
+                    android:src="@drawable/contactus" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -93,7 +93,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="25dp"
                     android:layout_weight="0.80"
-                    android:src="@drawable/terms" />
+                    android:src="@drawable/termss" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -119,7 +119,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="25dp"
                     android:layout_weight="0.80"
-                    android:src="@drawable/about_icon" />
+                    android:src="@drawable/appinfo" />
 
                 <TextView
                     android:layout_width="match_parent"

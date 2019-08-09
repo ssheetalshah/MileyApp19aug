@@ -23,7 +23,8 @@ public class LoginActivity extends AppCompatActivity {
         signup = (TextView)findViewById(R.id.btn_signup);
 
 
-//********************************************************************
+        //********************************************************************
+
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
                // finish();
             }
         });
+
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

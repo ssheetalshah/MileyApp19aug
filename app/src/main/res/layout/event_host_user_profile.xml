@@ -19,13 +19,13 @@
                 android:orientation="vertical">
 
                 <android.support.v7.widget.CardView
+                    android:layout_margin="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/gradientbackground"
                         android:orientation="vertical"
                         android:weightSum="1">
 
@@ -35,8 +35,7 @@
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_gravity="center"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="10dp"
                             android:src="@drawable/logo_lok"
                             app:civ_border_color="#000" />
 
@@ -46,7 +45,7 @@
                             android:layout_marginTop="10dp"
                             android:gravity="center"
                             android:text="Ms Soni"
-                            android:textColor="#fff"
+                            android:textColor="@color/colorPrimary"
                             android:textSize="20dp"
                             android:textStyle="bold" />
 
@@ -55,8 +54,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:gravity="center"
+                            android:layout_marginBottom="5dp"
                             android:text="Bhopal, India"
-                            android:textColor="#fff"
+                            android:textColor="@color/colorPrimary"
                             android:textSize="15dp" />
 
                     </LinearLayout>
